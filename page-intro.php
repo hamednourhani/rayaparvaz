@@ -1,3 +1,13 @@
+<?php
+/**
+ * Template Name: Intro
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
+ */
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +55,8 @@
 		
 	</div>
 	<footer>
-		<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>	
+		<!--<script src="http://192.168.0.1:35729/livereload.js?snipver=1"></script>-->
 	</footer>
 </body>
 </html>
+<?php // ?>

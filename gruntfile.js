@@ -17,9 +17,9 @@ module.exports = function(grunt) {
 		makepot: {
 	        target: {
 	            options: {
-	                cwd: 'dist',
+	                cwd: '',
 	                domainPath: '/languages',
-	                mainFile: 'dist/index.php',
+	                mainFile: 'index.php',
 	                potFilename: 'itstart.pot',
 	                processPot: function( pot, options ) {
 	                    pot.headers['report-msgid-bugs-to'] = 'http://itstar.ir/contact-us';
@@ -34,8 +34,8 @@ module.exports = function(grunt) {
 
 		jshint: {
 		    files: [
-		        'dist/js/**/*.js',
-		        'dist/js'
+		        'js/**/*.js',
+		        'js'
 		    ],//files
 		    options: {
 		        expr: true,
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
 		            report: 'gzip'
 		        },//options
 		        files: {
-		            'dist/js/script.min.js' : [
-		                'dist/js/components/*.js'
+		            'js/script.min.js' : [
+		                'js/components/*.js'
 		             ]
 		        }//files
 		    },//dist
@@ -68,8 +68,8 @@ module.exports = function(grunt) {
 		            mangle: false
 		        },//options
 		        files: {
-		            'dist/js/script.js' : [
-		                'dist/js/components/*.js'
+		            'js/script.js' : [
+		                'js/components/*.js'
 		            ]
 		        }//files
 		    }//dev
@@ -100,16 +100,16 @@ module.exports = function(grunt) {
 	        files: [
 	          {
 	            expand: true, 
-	            cwd: 'dist/css/temp/', 
+	            cwd: 'css/temp/', 
 	            src: ['*.css'], 
-	            dest: 'dist/css', 
+	            dest: 'css', 
 	            rename: function(dest, src) {
 	              return dest +'/'+ src.substring(0, src.indexOf('.')) + '.min.css';
 	            }
 	          }]
 	      },
 		   readme: {
-		        src: 'dist/readme.txt',
+		        src: 'readme.txt',
 		        dest: 'README.md'
 		    }//dist
 		},//copy
@@ -117,14 +117,14 @@ module.exports = function(grunt) {
 		
 		clean: {
 		  build: {
-		    src: ["dist/css/temp/**/*.css"]
+		    src: ["css/temp/**/*.css"]
 		  }
 		},//clean
 
 		curl: {
 		    'google-fonts-source': {
 		        src: 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBSO5nOEdE6OwYNtLBVDdVO1jsy9Or5wHQ',
-		        dest: 'dist/fonts/vendor/google-fonts-source.json'
+		        dest: 'fonts/vendor/google-fonts-source.json'
 		    }
 		},//cUrl
 		
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
 	        dist: {
 	            options: {
 	                ignore: ['node_modules'],
-	                directory : 'dist',
+	                directory : '',
 	                target : 'docs'
 	            }
 	        }
@@ -144,8 +144,8 @@ module.exports = function(grunt) {
          
 	        // recursive extension filter with output path 
 	        task1: {
-	            src: ['dist/images/**/*.png','images/**/*.jpg'],
-	            dest: 'dist/images/opt'
+	            src: ['images/**/*.png','images/**/*.jpg'],
+	            dest: 'images/opt'
 	        }//task1
 	 
 	    },//img
@@ -154,22 +154,22 @@ module.exports = function(grunt) {
 		watch: {
 			options : { livereload : true },
       		scripts :{
-      			files: ['dist/js/*.js'],
+      			files: ['js/*.js'],
       			tasks: ['jshint','uglify:dev','uglify:dist']
     		},//scripts
     		html : {
-    			files : ['dist/*.html']
+    			files : ['*.html']
     		},//html
     		sass : {
-    			files : ['dist/css/sass/**/*.scss'],
+    			files : ['css/sass/**/*.scss'],
     			tasks : ['compass:dev','compass:dist','copy:css','clean']
     		},
     		php : {
-    			files : ['dist/**/*.php'],
+    			files : ['**/*.php'],
     			tasks : ['makepot']
     		},
     		readme: {
-    			files : ['dist/readme.txt'],
+    			files : ['readme.txt'],
     			tasks : ['copy:readme']
     		}
     	}//watch

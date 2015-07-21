@@ -1,1 +1,15 @@
 /* main style */
+$total-columns : 12;
+$column-width : 4em;
+$gutter-width : 1em;
+$grid-padding : $gutter-width;
+
+@include border-box-sizing;
+
+$small : 30em;
+$medium : 45em;
+$larg : 75em;
+
+.layout{
+	@include container;
+}
