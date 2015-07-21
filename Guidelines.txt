@@ -1,0 +1,11 @@
+Background: Blur: 28
+Bar: Blur:192      Expo: -1.8        Contrast: -17
+Statistics: Blur:120      Expo: -0.78      Contrast: -28
+
+Farsi Font: "B Roya"    English: Myriad Pro & Helvetica Neo Light
+
+Shades: 1:255,255,255 A2:227,227,227 A:217,217,217 B:209,209,209 C:170,170,170 D:129,129,129 E:70,70,70 F:32,32,32
+
+ Width of Contents Border: About half of the screen(a littleeeeeee smaller, for example if 1024 Pixels are half of screen width, the content limit will be 1000 pixels. Go with your guts on this, a little!)
+
+ Distance Between Cards: 24 Pixels(Horizontal and Vertical) in a Retina iPad on LandScape.
