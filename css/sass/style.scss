@@ -1,5 +1,7 @@
 // compass ----------------------
 @import "compass";
+@import "compass/css3";
+@import "susyone";
 
 // theme information-------------------
 @import "theme/theme";
@@ -30,10 +32,12 @@
 @import "layout/nav";
 @import "layout/header";
 @import "layout/main";
+@import "layout/front-page";
 @import "layout/footer";
 
+
 // print layout --------------
-@import "base/print";
+//@import "base/print";
 
 
 // modules ------------------

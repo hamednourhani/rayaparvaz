@@ -1,0 +1,38 @@
+
+.logo-area{
+	@include clearfix;
+	padding : {
+		top : 80px;
+		bottom : 20px;
+	}
+	.logo-wrapper{
+		@include span-columns(4,12);
+		min-width :350px;
+		float : none;
+		display: block;
+		margin:auto;
+		text-align : center;
+		
+
+	}
+}
+.tours-area{
+	@include clearfix;
+	padding:{
+		top:30px;
+		bottom : 30px;
+	}
+	.tour-buttons{
+		@include span-columns(6,12);
+		text-align : center;
+		.tour-button{
+			display : block;
+			float : none;
+			margin : auto;
+		}
+	}
+	.tour-buttons:nth-child(2n){
+		@include span-columns(6 omega,12);
+		@include omega;
+	}
+}

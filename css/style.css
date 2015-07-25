@@ -7,7 +7,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -627,82 +627,180 @@ p {
   transform: translate(0, 0); }
 
 /* nav style */
+/* line 2, sass/layout/_nav.scss */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  /* line 10, sass/layout/_nav.scss */
+  .main-nav ul.main-nav-list {
+    padding: 0;
+    margin: 0;
+    width: inherit; }
+    /* line 14, sass/layout/_nav.scss */
+    .main-nav ul.main-nav-list li.nav-list {
+      display: inline-block;
+      width: 25%;
+      text-align: center;
+      margin: -2px; }
+
+/* line 24, sass/layout/_nav.scss */
+li.nav-list > a {
+  width: 100%;
+  display: inline-block;
+  border-right: 1px #ddd solid;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: #ddd;
+  background-color: rgba(42, 70, 81, 0.85);
+  line-height: 250%; }
+  /* line 37, sass/layout/_nav.scss */
+  li.nav-list > a:hover {
+    -moz-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+    background-color: #2A465E; }
+
+/* line 46, sass/layout/_nav.scss */
+li.nav-list:nth-child(4n) > a {
+  border-right: 0px; }
+
 /* header style */
 /* main style */
-/* footer style */
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Print Stylesheet
-
-This is the print stylesheet. There's probably not a lot
-of reasons to edit this stylesheet. If you want to
-though, go for it.
-
-******************************************************************/
-/* line 13, sass/base/_print.scss */
+/* line 14, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
-  background: transparent !important;
-  color: black !important;
-  text-shadow: none !important;
-  filter: none !important;
-  -ms-filter: none !important; }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
-/* line 21, sass/base/_print.scss */
-a, a:visited {
-  color: #444 !important;
-  text-decoration: underline; }
-  /* line 26, sass/base/_print.scss */
-  a:after, a:visited:after {
-    content: " (" attr(href) ")"; }
-  /* line 31, sass/base/_print.scss */
-  a abbr[title]:after, a:visited abbr[title]:after {
-    content: " (" attr(title) ")"; }
+/* line 13, sass/layout/_main.scss */
+.layout {
+  *zoom: 1;
+  max-width: 61em;
+  _width: 61em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .layout:after {
+    content: "";
+    display: table;
+    clear: both; }
 
-/* line 36, sass/base/_print.scss */
-.ir a:after,
-a[href^="javascript:"]:after,
-a[href^="#"]:after {
-  content: ""; }
+/* line 16, sass/layout/_main.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  display: block; }
 
-/* line 42, sass/base/_print.scss */
-pre, blockquote {
-  border: 1px solid #999;
-  page-break-inside: avoid; }
+/* line 26, sass/layout/_main.scss */
+.body-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-image: url('../images/introBack.jpg?1437798620');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; }
+  /* line 40, sass/layout/_main.scss */
+  .body-wrapper .back-wall {
+    width: 100%;
+    height: auto;
+    /*max-height: 100%;*/ }
+  /* line 47, sass/layout/_main.scss */
+  .body-wrapper .body-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0; }
+  /* line 57, sass/layout/_main.scss */
+  .body-wrapper ul.site-links {
+    position: absolute;
+    bottom: -20px;
+    right: 20px; }
+    /* line 62, sass/layout/_main.scss */
+    .body-wrapper ul.site-links > li {
+      display: inline-block;
+      list-style: none; }
+    /* line 66, sass/layout/_main.scss */
+    .body-wrapper ul.site-links > li a {
+      color: #ddd;
+      padding: 5px 0px;
+      margin: 0px 5px;
+      text-decoration: none;
+      border-top: 1px #ddd solid; }
 
-/* line 47, sass/base/_print.scss */
-thead {
-  display: table-header-group; }
+/* line 77, sass/layout/_main.scss */
+.body-wrapper.external-tours {
+  background-image: url('../images/externalBackGround.jpg?1437828655'); }
 
-/* line 51, sass/base/_print.scss */
-tr, img {
-  page-break-inside: avoid; }
+/* line 2, sass/layout/_front-page.scss */
+.logo-area {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 80px;
+  padding-bottom: 20px; }
+  /* line 8, sass/layout/_front-page.scss */
+  .logo-area .logo-wrapper {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+    min-width: 350px;
+    float: none;
+    display: block;
+    margin: auto;
+    text-align: center; }
 
-/* line 55, sass/base/_print.scss */
-img {
-  max-width: 100% !important; }
+/* line 19, sass/layout/_front-page.scss */
+.tours-area {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  /* line 25, sass/layout/_front-page.scss */
+  .tours-area .tour-buttons {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+    text-align: center; }
+    /* line 28, sass/layout/_front-page.scss */
+    .tours-area .tour-buttons .tour-button {
+      display: block;
+      float: none;
+      margin: auto; }
+  /* line 34, sass/layout/_front-page.scss */
+  .tours-area .tour-buttons:nth-child(2n) {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline; }
 
-@page {
-  margin: 0.5cm; }
-/* line 63, sass/base/_print.scss */
-p, h2, h3 {
-  orphans: 3;
-  widows: 3; }
-
-/* line 68, sass/base/_print.scss */
-h2,
-h3 {
-  page-break-after: avoid; }
-
-/* line 74, sass/base/_print.scss */
-.sidebar,
-.page-navigation,
-.wp-prev-next,
-.respond-form,
-nav {
-  display: none; }
-
+/* footer style */
 /* button style */
 /* dividers style */
 /* form style */
