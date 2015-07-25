@@ -28,7 +28,7 @@ body,html{
 	height:100%;
 	
 	display : block;
-	overflow: hidden;
+	overflow: scroll;
 	position : relative;
 	@include background-image(image-url("introBack.jpg"));
 	background-repeat: no-repeat;
