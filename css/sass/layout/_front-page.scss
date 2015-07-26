@@ -2,17 +2,25 @@
 .logo-area{
 	@include clearfix;
 	padding : {
-		top : 80px;
-		bottom : 20px;
+			top : 10px;
+	}
+	@include at-breakpoint($medium) {
+		padding : {
+			top : 50px;
+			bottom : 20px;
+		}
 	}
 	.logo-wrapper{
-		@include span-columns(4,12);
-		min-width :350px;
-		float : none;
-		display: block;
-		margin:auto;
+		@include span-columns(12,12);
+		min-width :120px;
 		text-align : center;
-		
+		margin:auto;
+		@include at-breakpoint($medium) {
+			@include span-columns(4,12);
+			float : none;
+			display: block;
+			margin:auto;
+		}
 
 	}
 }
@@ -23,16 +31,20 @@
 		bottom : 30px;
 	}
 	.tour-buttons{
-		@include span-columns(6,12);
+		@include span-columns(12,12);
 		text-align : center;
 		.tour-button{
 			display : block;
 			float : none;
 			margin : auto;
 		}
+		@include at-breakpoint($medium) {
+			@include span-columns(6,12);
+		}
 	}
 	.tour-buttons:nth-child(2n){
-		@include span-columns(6 omega,12);
-		@include omega;
+		@include at-breakpoint($medium) {
+			@include span-columns(6 omega,12);
+		}
 	}
 }

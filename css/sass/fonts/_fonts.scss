@@ -1,1 +1,4 @@
 /* fonts */
+@include font-face("BYekan", font-files("BYekan.ttf", "BYekan.woff"),"BYekan.eot");
+
+$bodyFont : "BYekan", tahoma;
