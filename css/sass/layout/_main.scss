@@ -9,6 +9,7 @@ $omega-float : left;
 @include border-box-sizing;
 
 $small : 30em;
+$xmedium : 34em;
 $medium : 45em;
 $larg : 75em;
 
@@ -44,8 +45,8 @@ body{
 		margin : 0;
 		padding : {
 
-			top : 50px;
-			bottom : 50px;
+			top : 0;
+			bottom : 50x;
 		}
 	}
 	ul.site-links{
@@ -101,14 +102,23 @@ article.single-tour{
 			display:block;
 			width : 100%;
 			height : auto;
+			text-align : center;
+			padding : auto;
+			margin : auto;
+
 		}
 		&>a.tour-link>img{
 			max-width : 100%;
 		}
 		
+		@include at-breakpoint($xmedium $medium) {
+			@include set-container-width;
+			@include span-columns(6,12);
+			&:nth-child(2n){
+				@include span-columns(6 omega,12);
+			}
+		}		
 		
-		
-
 		@include at-breakpoint($medium $larg) {
 			@include set-container-width;
 			@include span-columns(4,12);

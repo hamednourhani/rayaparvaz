@@ -11,6 +11,12 @@ sidebars, comments, ect.
 // LOAD rayaparvaz CORE (if you remove this, the theme will break)
 require_once( 'library/rayaparvaz.php' );
 
+//Include and setup custom metaboxes and fields.
+if( !class_exists("CMB2") ){
+    require_once( dirname(__FILE__)."/library/cmb/init.php" );
+}
+require_once( 'library/cmb/example-functions.php' );
+
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
  //require_once( 'library/admin.php' );
 
@@ -22,11 +28,10 @@ Let's get everything up and running.
 function rayaparvaz_ahoy() {
 
   //Allow editor style.
-  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
+  //add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'rayaparvaz', get
-    _template_directory() . '/library/translation' );
+  load_theme_textdomain( 'rayaparvaz', get_template_directory() . '/languages' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );

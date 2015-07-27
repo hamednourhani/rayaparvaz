@@ -18,14 +18,16 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-
+					
 				</div>
 
 			</footer>
+			
+		</div> <!-- body-content -->
+	
+	</div> <!-- body-wrapper -->
 
-		</div>
-
+		
 		<?php // all js scripts are loaded in library/rayaparvaz.php ?>
 		<?php wp_footer(); ?>
 

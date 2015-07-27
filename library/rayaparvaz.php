@@ -127,13 +127,13 @@ function rayaparvaz_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'rayaparvaz-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'rayaparvaz-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'rayaparvaz-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'rayaparvaz-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'rayaparvaz-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+		wp_register_style( 'rayaparvaz-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -141,10 +141,10 @@ function rayaparvaz_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'rayaparvaz-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		//wp_register_script( 'rayaparvaz-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'rayaparvaz-modernizr' );
+		//wp_enqueue_script( 'rayaparvaz-modernizr' );
 		wp_enqueue_style( 'rayaparvaz-stylesheet' );
 		wp_enqueue_style( 'rayaparvaz-ie-only' );
 
@@ -156,8 +156,13 @@ function rayaparvaz_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'rayaparvaz-js' );
+		//wp_enqueue_script( 'rayaparvaz-js' );
+		
 
+		// tage for taxonomy image url
+		// $image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array(
+		 //    'image_size' => 'medium'
+	 	//    ) );	
 	}
 }
 
@@ -172,7 +177,7 @@ function rayaparvaz_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
+	set_post_thumbnail_size(300, 250, true);
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

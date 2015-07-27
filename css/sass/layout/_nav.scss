@@ -1,27 +1,60 @@
-/* nav style */
-.main-nav{
+// /* nav style */
+.inner-header{
+	width : 100%;
 	position : fixed;
 	top : 0;
 	left : 0;
-	@include clearfix;
-	padding:0;
+}
+nav.header-menu{
+	
+	padding-right:25%;
 	margin :0;
 	width : 100%;
-	ul.main-nav-list{
+	ul.nav.top-nav{
 		padding:0;
 		margin :0;
 		width : inherit;
-		li.nav-list{
+		&>li{
 			display : inline-block;
-			width : 25%;
+			width : 33.33%;
 			text-align :center;
-			margin: -2px;
+			
 			
 		}
 	}
-}
-li.nav-list{
-	&>a.nav-links{
+	.sub-menu{
+		display : none;
+		padding : 0;
+		position : absolute;
+		bottom : 0;
+		left : 0;
+		z-index : 9999;
+		width : 100%;
+	}
+	ul{
+		left : 100%;
+		top : 0;
+		li:hover > ul{
+			display : block;
+		}
+	}
+	
+	ul a,ul ul a{
+		margin : 0;
+		border-bottom : 1px solid $tingrey;
+	}
+	
+	li{
+		width : 100%;
+		border-bottom : 1px solid;
+	}
+	li:hover > ul{
+		display : block;
+	}
+ }
+li.menu-item{
+	position : relative;
+	&>a{
 		width : 100%;
 		display : inline-block;
 		border : {
@@ -34,25 +67,30 @@ li.nav-list{
 		background-color: rgba(42,70,81,0.85);
 		line-height: 250%;
 	
+		
+
 		&:hover{
 			@include single-transition(background-color,0.4s);
 			background-color: #2A465E;
-
-		}
-		&.home-link{
-			color : rgba(0,0,0,0);
-			@include background-image(image-url("RayaSite-30.png"));
-			background-repeat: no-repeat;
-    		background-position: center;
-    		background-size : inherit;
+	    	
 		}
 
+		
+
 	}
+
+
 }
-li.nav-list:nth-child(4n){
-	&>a{
-		border:{
-			left : 0px;
-		}
-	}
+/* --- Header-menu -----------------*/
+
+
+
+
+
+
+ul.header-menu li:hover > ul, .header-menu ul li:hover > ul {
+
 }
+
+
+
