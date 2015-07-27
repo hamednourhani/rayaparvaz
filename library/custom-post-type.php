@@ -28,21 +28,21 @@ function custom_post_example() {
 	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Custom Types', 'rayaparvaztheme' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Custom Post', 'rayaparvaztheme' ), /* This is the individual type */
-			'all_items' => __( 'All Custom Posts', 'rayaparvaztheme' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'rayaparvaztheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Custom Type', 'rayaparvaztheme' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'rayaparvaztheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Post Types', 'rayaparvaztheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Post Type', 'rayaparvaztheme' ), /* New Display Title */
-			'view_item' => __( 'View Post Type', 'rayaparvaztheme' ), /* View Display Title */
-			'search_items' => __( 'Search Post Type', 'rayaparvaztheme' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'rayaparvaztheme' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'rayaparvaztheme' ), /* This displays if there is nothing in the trash */
+			'name' => __( 'Custom Types', 'rayaparvaz' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Custom Post', 'rayaparvaz' ), /* This is the individual type */
+			'all_items' => __( 'All Custom Posts', 'rayaparvaz' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'rayaparvaz' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Custom Type', 'rayaparvaz' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'rayaparvaz' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit Post Types', 'rayaparvaz' ), /* Edit Display Title */
+			'new_item' => __( 'New Post Type', 'rayaparvaz' ), /* New Display Title */
+			'view_item' => __( 'View Post Type', 'rayaparvaz' ), /* View Display Title */
+			'search_items' => __( 'Search Post Type', 'rayaparvaz' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'rayaparvaz' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'rayaparvaz' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example custom post type', 'rayaparvaztheme' ), /* Custom Type Description */
+			'description' => __( 'This is the example custom post type', 'rayaparvaz' ), /* Custom Type Description */
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
@@ -80,16 +80,16 @@ function custom_post_example() {
 		array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Custom Categories', 'rayaparvaztheme' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Custom Category', 'rayaparvaztheme' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Custom Categories', 'rayaparvaztheme' ), /* search title for taxomony */
-				'all_items' => __( 'All Custom Categories', 'rayaparvaztheme' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Custom Category', 'rayaparvaztheme' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Custom Category:', 'rayaparvaztheme' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Custom Category', 'rayaparvaztheme' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Custom Category', 'rayaparvaztheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Custom Category', 'rayaparvaztheme' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Custom Category Name', 'rayaparvaztheme' ) /* name title for taxonomy */
+				'name' => __( 'Custom Categories', 'rayaparvaz' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Custom Category', 'rayaparvaz' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Custom Categories', 'rayaparvaz' ), /* search title for taxomony */
+				'all_items' => __( 'All Custom Categories', 'rayaparvaz' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Custom Category', 'rayaparvaz' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Custom Category:', 'rayaparvaz' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Custom Category', 'rayaparvaz' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Custom Category', 'rayaparvaz' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Custom Category', 'rayaparvaz' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Custom Category Name', 'rayaparvaz' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true, 
 			'show_ui' => true,
@@ -104,16 +104,16 @@ function custom_post_example() {
 		array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
-				'name' => __( 'Custom Tags', 'rayaparvaztheme' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Custom Tag', 'rayaparvaztheme' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Custom Tags', 'rayaparvaztheme' ), /* search title for taxomony */
-				'all_items' => __( 'All Custom Tags', 'rayaparvaztheme' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Custom Tag', 'rayaparvaztheme' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Custom Tag:', 'rayaparvaztheme' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Custom Tag', 'rayaparvaztheme' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Custom Tag', 'rayaparvaztheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Custom Tag', 'rayaparvaztheme' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Custom Tag Name', 'rayaparvaztheme' ) /* name title for taxonomy */
+				'name' => __( 'Custom Tags', 'rayaparvaz' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Custom Tag', 'rayaparvaz' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Custom Tags', 'rayaparvaz' ), /* search title for taxomony */
+				'all_items' => __( 'All Custom Tags', 'rayaparvaz' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Custom Tag', 'rayaparvaz' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Custom Tag:', 'rayaparvaz' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Custom Tag', 'rayaparvaz' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Custom Tag', 'rayaparvaz' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Custom Tag', 'rayaparvaz' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Custom Tag Name', 'rayaparvaz' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
 			'show_ui' => true,

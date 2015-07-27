@@ -78,7 +78,7 @@ body{
 	a.section-title{
 		@include clearfix;
 		display : block;
-		color : $white;
+		color : $tinyellow;
 		
 		h1{
 			font-weight : 500;
@@ -111,9 +111,9 @@ article.single-tour{
 
 		@include at-breakpoint($medium $larg) {
 			@include set-container-width;
-			@include span-columns(6,12);
-			&:nth-child(2n){
-				@include span-columns(6 omega,12);
+			@include span-columns(4,12);
+			&:nth-child(3n){
+				@include span-columns(4 omega,12);
 			}
 		}
 		@include at-breakpoint($larg) {

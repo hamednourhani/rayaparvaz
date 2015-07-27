@@ -4,6 +4,10 @@
   font-family: "BYekan";
   src: url('../fonts/BYekan.eot?1436611067');
   src: url('../fonts/BYekan.eot?&1436611067#iefix') format('embedded-opentype'), url('../fonts/BYekan.ttf?1436611067') format('truetype'), url('../fonts/BYekan.woff?1436611022') format('woff'); }
+@font-face {
+  font-family: "Roya";
+  src: url('../fonts/IRRoya.eot?1437962066');
+  src: url('../fonts/IRRoya.eot?&1437962066#iefix') format('embedded-opentype'), url('../fonts/IRRoya.ttf?1387518408') format('truetype'), url('../fonts/IRRoya.woff?1437961990') format('woff'); }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -11,7 +15,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -704,7 +708,7 @@ li.nav-list:nth-child(4n) > a {
 
 /* header style */
 /* main style */
-/* line 14, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -719,7 +723,7 @@ li.nav-list:nth-child(4n) > a {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -727,7 +731,7 @@ li.nav-list:nth-child(4n) > a {
 
 /* line 19, sass/layout/_main.scss */
 body {
-  font-family: "BYekan", tahoma;
+  font-family: "Roya", tahoma;
   direction: rtl;
   background-image: url('../images/introBack.jpg?1437798620');
   background-repeat: no-repeat;
@@ -779,7 +783,7 @@ body {
     overflow: hidden;
     *zoom: 1;
     display: block;
-    color: #fff; }
+    color: #FFD; }
     /* line 83, sass/layout/_main.scss */
     .site-main a.section-title h1 {
       font-weight: 500;
@@ -807,12 +811,12 @@ article.single-tour {
     /* line 96, sass/layout/_main.scss */
     article.single-tour {
       max-width: 51em;
-      width: 49.15254%;
+      width: 32.20339%;
       float: right;
       margin-left: 1.69492%; }
       /* line 115, sass/layout/_main.scss */
-      article.single-tour:nth-child(2n) {
-        width: 49.15254%;
+      article.single-tour:nth-child(3n) {
+        width: 32.20339%;
         float: left;
         margin-left: 0; } }
   @media (min-width: 75em) {

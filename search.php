@@ -5,7 +5,7 @@
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'rayaparvaztheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'rayaparvaz' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -16,7 +16,7 @@
 									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
                   						<p class="byline entry-meta vcard">
-                    							<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaztheme' ),
+                    							<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaz' ),
                    							    /* the time the post was published */
                    							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                       							    /* the author of the post */
@@ -27,17 +27,17 @@
 								</header>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'rayaparvaztheme' ) . '</span>' ); ?>
+										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'rayaparvaz' ) . '</span>' ); ?>
 
 								</section>
 
 								<footer class="article-footer">
 
 									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', 'rayaparvaztheme' ), get_the_category_list(', ') ); ?>
+                  					<?php printf( __( 'Filed under: %1$s', 'rayaparvaz' ), get_the_category_list(', ') ); ?>
                   					<?php endif; ?>
 
-                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'rayaparvaztheme' ) . '</span> ', ', ', '</p>' ); ?>
+                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'rayaparvaz' ) . '</span> ', ', ', '</p>' ); ?>
 
 								</footer> <!-- end article footer -->
 
@@ -51,13 +51,13 @@
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'rayaparvaztheme' ); ?></h1>
+											<h1><?php _e( 'Sorry, No Results.', 'rayaparvaz' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'rayaparvaztheme' ); ?></p>
+											<p><?php _e( 'Try your search again.', 'rayaparvaz' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'rayaparvaztheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the search.php template.', 'rayaparvaz' ); ?></p>
 										</footer>
 									</article>
 

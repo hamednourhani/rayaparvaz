@@ -12,7 +12,7 @@ sidebars, comments, ect.
 require_once( 'library/rayaparvaz.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+ //require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH rayaparvaz
@@ -25,7 +25,8 @@ function rayaparvaz_ahoy() {
   add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'rayaparvaztheme', get_template_directory() . '/library/translation' );
+  load_theme_textdomain( 'rayaparvaz', get
+    _template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );
@@ -74,7 +75,7 @@ if ( ! isset( $content_width ) ) {
 
 // Thumbnail sizes
 add_image_size( 'rayaparvaz-thumb-600', 600, 150, true );
-add_image_size( 'rayaparvaz-thumb-300', 300, 100, true );
+add_image_size( 'rayaparvaz-thumb-300', 300, 300, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -100,8 +101,8 @@ add_filter( 'image_size_names_choose', 'rayaparvaz_custom_image_sizes' );
 
 function rayaparvaz_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'rayaparvaz-thumb-600' => __('600px by 150px'),
-        'rayaparvaz-thumb-300' => __('300px by 100px'),
+        'rayaparvaz-thumb-600' => __('600px by 400px'),
+        'rayaparvaz-thumb-300' => __('300px by 250px'),
     ) );
 }
 
@@ -156,8 +157,8 @@ add_action( 'customize_register', 'rayaparvaz_theme_customizer' );
 function rayaparvaz_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'rayaparvaztheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'rayaparvaztheme' ),
+		'name' => __( 'Sidebar 1', 'rayaparvaz' ),
+		'description' => __( 'The first (primary) sidebar.', 'rayaparvaz' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -174,8 +175,8 @@ function rayaparvaz_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'rayaparvaztheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'rayaparvaztheme' ),
+		'name' => __( 'Sidebar 2', 'rayaparvaz' ),
+		'description' => __( 'The second (secondary) sidebar.', 'rayaparvaz' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -212,13 +213,13 @@ function rayaparvaz_comments( $comment, $args, $depth ) {
         ?>
         <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'rayaparvaztheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'rayaparvaztheme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'rayaparvaztheme' )); ?> </a></time>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'rayaparvaz' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'rayaparvaz' ),'  ','') ) ?>
+        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'rayaparvaz' )); ?> </a></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>
         <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'rayaparvaztheme' ) ?></p>
+          <p><?php _e( 'Your comment is awaiting moderation.', 'rayaparvaz' ) ?></p>
         </div>
       <?php endif; ?>
       <section class="comment_content cf">

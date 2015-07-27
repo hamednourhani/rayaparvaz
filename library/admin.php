@@ -79,7 +79,7 @@ function rayaparvaz_rss_dashboard_widget() {
 	else foreach ($items as $item) { ?>
 
 	<h4 style="margin-bottom: 0;">
-		<a href="<?php echo $item->get_permalink(); ?>" title="<?php echo mysql2date( __( 'j F Y @ g:i a', 'rayaparvaztheme' ), $item->get_date( 'Y-m-d H:i:s' ) ); ?>" target="_blank">
+		<a href="<?php echo $item->get_permalink(); ?>" title="<?php echo mysql2date( __( 'j F Y @ g:i a', 'rayaparvaz' ), $item->get_date( 'Y-m-d H:i:s' ) ); ?>" target="_blank">
 			<?php echo $item->get_title(); ?>
 		</a>
 	</h4>
@@ -91,7 +91,7 @@ function rayaparvaz_rss_dashboard_widget() {
 
 // calling all custom dashboard widgets
 function rayaparvaz_custom_dashboard_widgets() {
-	wp_add_dashboard_widget( 'rayaparvaz_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'rayaparvaztheme' ), 'rayaparvaz_rss_dashboard_widget' );
+	wp_add_dashboard_widget( 'rayaparvaz_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'rayaparvaz' ), 'rayaparvaz_rss_dashboard_widget' );
 	/*
 	Be sure to drop any other created Dashboard Widgets
 	in this function and they will all load.
@@ -100,9 +100,9 @@ function rayaparvaz_custom_dashboard_widgets() {
 
 
 // removing the dashboard widgets
-add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
+//add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
 // adding any custom widgets
-add_action( 'wp_dashboard_setup', 'rayaparvaz_custom_dashboard_widgets' );
+//add_action( 'wp_dashboard_setup', 'rayaparvaz_custom_dashboard_widgets' );
 
 
 /************* CUSTOM LOGIN PAGE *****************/
@@ -122,7 +122,7 @@ function rayaparvaz_login_url() {  return home_url(); }
 function rayaparvaz_login_title() { return get_option( 'blogname' ); }
 
 // calling it only on the login page
-add_action( 'login_enqueue_scripts', 'rayaparvaz_login_css', 10 );
+//add_action( 'login_enqueue_scripts', 'rayaparvaz_login_css', 10 );
 add_filter( 'login_headerurl', 'rayaparvaz_login_url' );
 add_filter( 'login_headertitle', 'rayaparvaz_login_title' );
 
@@ -138,7 +138,7 @@ you like.
 
 // Custom Backend Footer
 function rayaparvaz_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/rayaparvaz" target="_blank">rayaparvaz</a>.', 'rayaparvaztheme' );
+	_e( '<span id="footer-thankyou">Developed by <a href="http://rayaparvaz.com" target="_blank">Rayaparvaz</a></span>. Built using <a href="http://themble.com/rayaparvaz" target="_blank">rayaparvaz</a>.', 'rayaparvaz' );
 }
 
 // adding it to the admin area

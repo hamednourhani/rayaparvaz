@@ -14,7 +14,7 @@
 
 									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline entry-meta vcard">
-                                        				<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaztheme' ),
+                                        				<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaz' ),
                        								/* the time the post was published */
                        								'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                        								/* the author of the post */
@@ -30,13 +30,13 @@
 
 								<footer class="article-footer cf">
 									<p class="footer-comment-count">
-										<?php comments_number( __( '<span>No</span> Comments', 'rayaparvaztheme' ), __( '<span>One</span> Comment', 'rayaparvaztheme' ), __( '<span>%</span> Comments', 'rayaparvaztheme' ) );?>
+										<?php comments_number( __( '<span>No</span> Comments', 'rayaparvaz' ), __( '<span>One</span> Comment', 'rayaparvaz' ), __( '<span>%</span> Comments', 'rayaparvaz' ) );?>
 									</p>
 
 
-                 	<?php printf( '<p class="footer-category">' . __('filed under', 'rayaparvaztheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
+                 	<?php printf( '<p class="footer-category">' . __('filed under', 'rayaparvaz' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
 
-                  <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'rayaparvaztheme' ) . '</span> ', ', ', '</p>' ); ?>
+                  <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'rayaparvaz' ) . '</span> ', ', ', '</p>' ); ?>
 
 
 								</footer>
@@ -51,13 +51,13 @@
 
 									<article id="post-not-found" class="hentry cf">
 											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaztheme' ); ?></h1>
+												<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
 										</header>
 											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaztheme' ); ?></p>
+												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the index.php template.', 'rayaparvaztheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the index.php template.', 'rayaparvaz' ); ?></p>
 										</footer>
 									</article>
 

@@ -8,12 +8,12 @@
 
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
-									<span><?php _e( 'Posts Categorized:', 'rayaparvaztheme' ); ?></span> <?php single_cat_title(); ?>
+									<span><?php _e( 'Posts Categorized:', 'rayaparvaz' ); ?></span> <?php single_cat_title(); ?>
 								</h1>
 
 							<?php } elseif (is_tag()) { ?>
 								<h1 class="archive-title h2">
-									<span><?php _e( 'Posts Tagged:', 'rayaparvaztheme' ); ?></span> <?php single_tag_title(); ?>
+									<span><?php _e( 'Posts Tagged:', 'rayaparvaz' ); ?></span> <?php single_tag_title(); ?>
 								</h1>
 
 							<?php } elseif (is_author()) {
@@ -22,22 +22,22 @@
 							?>
 								<h1 class="archive-title h2">
 
-									<span><?php _e( 'Posts By:', 'rayaparvaztheme' ); ?></span> <?php the_author_meta('display_name', $author_id); ?>
+									<span><?php _e( 'Posts By:', 'rayaparvaz' ); ?></span> <?php the_author_meta('display_name', $author_id); ?>
 
 								</h1>
 							<?php } elseif (is_day()) { ?>
 								<h1 class="archive-title h2">
-									<span><?php _e( 'Daily Archives:', 'rayaparvaztheme' ); ?></span> <?php the_time('l, F j, Y'); ?>
+									<span><?php _e( 'Daily Archives:', 'rayaparvaz' ); ?></span> <?php the_time('l, F j, Y'); ?>
 								</h1>
 
 							<?php } elseif (is_month()) { ?>
 									<h1 class="archive-title h2">
-										<span><?php _e( 'Monthly Archives:', 'rayaparvaztheme' ); ?></span> <?php the_time('F Y'); ?>
+										<span><?php _e( 'Monthly Archives:', 'rayaparvaz' ); ?></span> <?php the_time('F Y'); ?>
 									</h1>
 
 							<?php } elseif (is_year()) { ?>
 									<h1 class="archive-title h2">
-										<span><?php _e( 'Yearly Archives:', 'rayaparvaztheme' ); ?></span> <?php the_time('Y'); ?>
+										<span><?php _e( 'Yearly Archives:', 'rayaparvaz' ); ?></span> <?php the_time('Y'); ?>
 									</h1>
 							<?php } ?>
 
@@ -49,7 +49,7 @@
 
 									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									<p class="byline entry-meta vcard">
-										<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaztheme' ),
+										<?php printf( __( 'Posted %1$s by %2$s', 'rayaparvaz' ),
                   							     /* the time the post was published */
                   							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                        								/* the author of the post */
@@ -81,13 +81,13 @@
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaztheme' ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaztheme' ); ?></p>
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'rayaparvaztheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the archive.php template.', 'rayaparvaz' ); ?></p>
 										</footer>
 									</article>
 

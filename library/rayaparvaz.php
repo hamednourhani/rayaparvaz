@@ -211,8 +211,8 @@ function rayaparvaz_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'rayaparvaztheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'rayaparvaztheme' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'rayaparvaz' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'rayaparvaz' ) // secondary nav in footer
 		)
 	);
 } /* end rayaparvaz theme support */
@@ -242,7 +242,7 @@ function rayaparvaz_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'rayaparvaztheme' ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'rayaparvaz' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
@@ -287,7 +287,7 @@ function rayaparvaz_filter_ptags_on_images($content){
 function rayaparvaz_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'rayaparvaztheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'rayaparvaztheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'rayaparvaz' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'rayaparvaz' ) .'</a>';
 }
 
 
