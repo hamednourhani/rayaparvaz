@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf">
-
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+				<main id="main" class="site-main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<section class="layout">
 						<article id="post-not-found" class="hentry cf">
 
 							<header class="article-header">
@@ -33,11 +29,7 @@
 							</footer>
 
 						</article>
-
-					</main>
-
-				</div>
-
-			</div>
-
+					</section>		
+				</main>
+				
 <?php get_footer(); ?>

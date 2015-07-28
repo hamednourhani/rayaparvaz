@@ -2,6 +2,7 @@
 
 // /* nav style */
 #inner-header{
+	z-index : 9999;
 	width : 100%;
 	position : fixed;
 	top : 0;
@@ -9,7 +10,7 @@
 	a.menu-toggler{
 		display :inline-block;
 		padding : {
-			top :4px;
+			top :7px;
 		}
 		text-align : center;
 		width : 100%;
@@ -22,7 +23,7 @@
 		}
 		img.menu-icon{
 			position :absolute;
-			top :7px;
+			top :10px;
 			right : 10px;
 		}
 	}
@@ -47,7 +48,7 @@ nav.header-menu{
 	
 	margin :0;
 	width : 100%;
-	height : 40px;
+	height : 49px;
 	ul.nav.top-nav{
 		padding:0;
 		margin :0;
@@ -71,7 +72,7 @@ nav.header-menu{
 		@include at-breakpoint($small) {
 			display : none;
 			position : absolute;
-			top : 40px;
+			top : 49px;
 			left : 0;
 			padding : 0;
 			z-index : 9999;
@@ -172,7 +173,7 @@ a.site-logo{
 	  width : 25%;
 	}
 	
-	height : 41px;
+	height : 49px;
 	
 	line-height : 250%;
 	text-align : center;
