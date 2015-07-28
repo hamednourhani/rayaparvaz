@@ -1,17 +1,4 @@
 /* main style */
-$total-columns : 12;
-$column-width : 4em;
-$gutter-width : 1em;
-$grid-padding : $gutter-width;
-$from-direction: right;
-$omega-float : left;
-
-@include border-box-sizing;
-
-$small : 30em;
-$xmedium : 34em;
-$medium : 45em;
-$larg : 75em;
 
 .layout{
 	@include container;
@@ -32,6 +19,7 @@ body{
 }
 .body-wrapper{
 	width : 100%;
+	//height : 100%;
 	min-height : 100%;
 	display : block;
 	overflow: hidden;
@@ -41,75 +29,81 @@ body{
 		
 	.body-content{
 		width : 100%;
+		//height : 100%;
 		min-height : 100%;
 		margin : 0;
 		padding : {
 
-			top : 0;
+			top : 50px;
 			bottom : 50x;
 		}
 	}
-	ul.site-links{
-		position : absolute;
-		bottom : 0px ;
-		right : 20px;
-		margin : {
-			bottom : 0;
-		}
-		
-		&>li{
-			display : inline-block;
-			list-style: none;
-		}
-		&>li a{
-			color : $tingrey;
-			padding : 5px 0px;
-			margin : 0px 5px;
-			text-decoration: none;
-			border:{
-				top : 1px $tingrey solid ;
-			}
-		}
-	}
+	
 }
 .site-main{
 	@include clearfix;
+	padding-bottom : 50px;
+	padding-top : 50px;
 	
 
-	a.section-title{
+	.section-title{
 		@include clearfix;
 		display : block;
-		color : $tinyellow;
-		
-		h1{
-			font-weight : 500;
-			line-height : 300%;
-			@include background-image(image-url("external-title.png"));
-			background-repeat : no-repeat;
-			background-size : 120px;
-			background-position : center right 30px;
+		color : $navy;
+		font-weight : 500;
+		line-height : 300%;
+		@include background-image(image-url("external-title.png"));
+		background-repeat : no-repeat;
+		background-size : 120px;
+		background-position : center right 30px;
 			
-			}
+			
 	}
 	
 }
 
-article.single-tour{
+article.archive-tour{
 		
 		@include span-columns(12,12);
 		
 		&>a.tour-link{
-			display:block;
+			position : relative;
+			display:inline-block;
 			width : 100%;
 			height : auto;
 			text-align : center;
 			padding : auto;
 			margin : auto;
+			overflow : hidden;
+			
+
+			.archive-tour-title{
+				display : inline-block;
+				width : 100%;
+				height : 50px;
+				padding : 10px;
+				font-size : 160%;
+				position : absolute;
+				bottom : 0;
+				right : 0;
+				text-align : right;
+				background : $tingrey;
+				color : $navy;
+			}
+			img.wp-post-image{
+				max-width : 100%;
+				height :auto;
+				opacity : 0.85;
+
+				transition: all .7s ease-in-out;
+			}
+			&:hover img{
+				opacity : 1;
+				transform : scale(1.2) rotate(5deg);
+			}
 
 		}
-		&>a.tour-link>img{
-			max-width : 100%;
-		}
+		
 		
 		@include at-breakpoint($xmedium $medium) {
 			@include set-container-width;
@@ -136,4 +130,137 @@ article.single-tour{
 		}
 	
 	}
+
+article.single-tour{
+	padding-top : 50px;
+	.tour-header,.tour-slide,.tour-content,.tour-detail,.weather-detail{
+		@include span-columns(12,12);
+	}
+	.tour-header{
+		
+		@include at-breakpoint($medium) {
+		  @include span-columns(8,12);
+		}
+		.tour-title{
+			padding : 20px;
+			margin : 0px 0px;
+			background-color : $glassyWhite;
+			color : $navy;
+		}
+		margin-bottom : 5px;
+		border-bottom : 1px solid $navy;
+	}
+	.tour-slide{
+		@include at-breakpoint($medium) {
+		  @include span-columns(4 omega,12);
+		  text-align : center;
+		}
+		
+		img{
+			width: 100%;
+			max-width : 100%;
+			height : auto;
+			margin : auto;
+		}
+	}
+	.tour-content{
+		background : $glassyWhite;
+		padding : 10px 20px;
+		@include at-breakpoint($medium) {
+		  @include span-columns(8,12);
+		}
+		margin-bottom : 20px;
+	}
+	.tour-footer{
+		@include clearfix;
+		width : 100%;
+		div{
+			padding : 20px;
+		}
+		.tour-detail{
+			color : $white;
+			background-color : $glassyBlack;
+			margin-bottom : 20px;
+			@include at-breakpoint($medium) {
+			  @include span-columns(8,12);
+			}
+			.tour-detail-title{
+				border-bottom : 1px solid $tingrey;
+				font-size: 120%;
+				margin :0;
+				padding : 10px 20px;
+			}
+			
+		}
+		.weather-detail{
+			background-color : $glassyWhite;
+			margin-bottom : 20px;
+			.weather-detail-title{
+				font-size: 120%;
+				margin :0;
+				padding : 10px 20px;
+				border-bottom : 1px solid $grey;
+			}
+
+			@include at-breakpoint($medium) {
+			  @include span-columns(4 omega,12);
+			}
+		}
+
+	}
+
+}
+.section-title.noback{
+	text-align : center;
+	background : none;
+}
+
+.hotel-list{
+	
+	
+	
+	a.hotel-link{
+		background-color : $glassyWhite;
+		border-bottom : 2px solid $navy;
+		color : $navy;
+		@include span-columns(12,12);
+		@include at-breakpoint($medium) {
+			@include span-columns(9,12);
+			float : none;
+			margin : auto;
+			margin-bottom : 5px;
+		}
+		
+		margin : auto;
+		margin-bottom : 5px;
+		display : block;
+		overflow : hidden;
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+			
+		&:hover{
+			background-color : $tingrey;
+		}
+	
+
+		h3.hotel-name{
+			@include span-columns(8,12);
+			margin : 0;
+			padding : 10px 20px;
+
+			@include at-breakpoint($medium) {
+			  @include span-columns(5,12);
+			}
+					
+		}
+		span.hotel-rate{
+			@include span-columns(4 omega,12);
+			&>img{
+				padding-top : 8px;
+			}
+		}
+
+	}
+
+}
 

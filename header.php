@@ -50,7 +50,11 @@
 
 
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="inner-header cf">
+					<a href="#" class="menu-toggler">
+						<img class="mobile-site-logo" src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="Rayaparvaz" alt="Rayaparvaz"/>
+						<img class="menu-icon" src="<?php echo get_template_directory_uri();?>/images/menu-toggler.png" alt="Menu" title="Menu"/>
+					</a>
 
 					<nav role="navigation" class = "header-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<a href="http://rayaparvaz.com" class="site-logo"><img src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="Rayaparvaz" /></a>
@@ -64,7 +68,7 @@
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
         			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
+        			               'depth' => 3,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 

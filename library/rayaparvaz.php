@@ -53,6 +53,13 @@ function rayaparvaz_head_cleanup() {
 
 } /* end rayaparvaz head cleanup */
 
+//hide admin bar from front end
+function my_function_admin_bar(){ 
+	if(!is_admin()){
+		return false; 
+	}
+}
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
 function rw_title( $title, $sep, $seplocation ) {
@@ -141,10 +148,10 @@ function rayaparvaz_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		//wp_register_script( 'rayaparvaz-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'rayaparvaz-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		//wp_enqueue_script( 'rayaparvaz-modernizr' );
+		wp_enqueue_script( 'rayaparvaz-modernizr' );
 		wp_enqueue_style( 'rayaparvaz-stylesheet' );
 		wp_enqueue_style( 'rayaparvaz-ie-only' );
 
@@ -156,7 +163,7 @@ function rayaparvaz_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		//wp_enqueue_script( 'rayaparvaz-js' );
+		wp_enqueue_script( 'rayaparvaz-js' );
 		
 
 		// tage for taxonomy image url
