@@ -15,7 +15,7 @@ require_once( 'library/rayaparvaz.php' );
 if( !class_exists("CMB2") ){
     require_once( dirname(__FILE__)."/library/cmb/init.php" );
 }
-require_once( 'library/cmb/example-functions.php' );
+require_once( 'library/cmb-functions.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
  //require_once( 'library/admin.php' );

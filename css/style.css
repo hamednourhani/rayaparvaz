@@ -836,7 +836,7 @@ a.site-logo {
     color: #fff; }
   /* line 197, sass/layout/_header.scss */
   a.site-logo > img {
-    padding-top: 3px; }
+    padding-top: 8px; }
 
 /* main style */
 /* line 3, sass/layout/_main.scss */

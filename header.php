@@ -46,6 +46,7 @@
 		<!-- <img src="images/introBack.jpg" class="back-wall"/> -->
 			<div class="body-content">
 			
+			<?php if(!is_front_page()){ ?>
 				<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 
@@ -77,3 +78,4 @@
 				</div>
 
 			</header>
+		<?php } ?>
