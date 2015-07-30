@@ -61,6 +61,45 @@
 							 ?>
 									
 							</div>
+							<div id="slider_container" style="position: relative; top: 0px; left: 0px; width: 800px;
+						        height: 456px; background: #24262e; overflow: hidden;">
+
+						        <!-- Loading Screen -->
+						        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+						            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+						                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+						            </div>
+						            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+						                top: 0px; left: 0px;width: 100%;height:100%;">
+						            </div>
+						        </div>
+
+						        <!-- Slides Container -->
+						        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
+						            <div>
+						                <img u="image" src="../img/alila/01.jpg" />
+						                <img u="thumb" src="../img/alila/thumb-01.jpg" />
+						            </div>
+						            
+						        </div>
+						                
+						        <!--#region Thumbnail Navigator Skin Begin -->
+						        <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
+						        
+						        <!-- thumbnail navigator container -->
+						        <div u="thumbnavigator" class="jssort05" style="left: 0px; bottom: 0px;">
+						            <!-- Thumbnail Item Skin Begin -->
+						            <div u="slides" style="cursor: default;">
+						                <div u="prototype" class="p">
+						                    <div class="o">
+						                        <div u="thumbnailtemplate" class="b"></div>
+						                        <div class="i"></div>
+						                        <div u="thumbnailtemplate" class="f"></div>
+						                    </div>
+						                </div>
+						            </div>
+						            <!-- Thumbnail Item Skin End -->
+						        </div>
 
 							<section class="hotel-content cf">
 								<?php the_content(); ?>
