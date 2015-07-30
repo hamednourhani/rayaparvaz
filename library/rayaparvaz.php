@@ -309,7 +309,7 @@ function rayaparvaz_inline_style(){
 		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
 		var_dump($background_url);
 		if($background_url){
-			echo '<style> body{background : url('.$background_url.')}</style>';
+			echo '<style> body{background-image : url('.$background_url.')}</style>';
 		}
 	}
 
