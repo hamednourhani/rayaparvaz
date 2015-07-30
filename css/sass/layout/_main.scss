@@ -134,81 +134,82 @@ article.archive-tour{
 
 article.single-tour{
 	padding-top : 50px;
-	.tour-header,.tour-slide,.tour-content,.tour-detail,.weather-detail{
+	line-height : 150%;
+	
+	.tour-content,.tour-extra,.tour-slide,
+	.tour-header,.tour-information{
+		width : 100%;
+	}
+	.tour-detail,.tour-side{
 		@include span-columns(12,12);
 	}
-	.tour-header{
-		
-		@include at-breakpoint($medium) {
-		  @include span-columns(8,12);
+	.tour-side{
+		@include at-breakpoint($medium){
+			@include span-columns(4,12);
 		}
-		.tour-title{
-			padding : 20px;
-			margin : 0px 0px;
-			background-color : $glassyWhite;
-			color : $navy;
-		}
-		margin-bottom : 5px;
-		border-bottom : 1px solid $navy;
-	}
-	.tour-slide{
-		@include at-breakpoint($medium) {
-		  @include span-columns(4 omega,12);
-		  text-align : center;
-		}
-		
-		img{
-			width: 100%;
-			max-width : 100%;
-			height : auto;
-			margin : auto;
-		}
-	}
-	.tour-content{
-		background : $glassyWhite;
-		padding : 10px 20px;
-		@include at-breakpoint($medium) {
-		  @include span-columns(8,12);
-		}
-		margin-bottom : 20px;
-	}
-	.tour-footer{
-		@include clearfix;
-		width : 100%;
-		div{
-			padding : 20px;
-		}
-		.tour-detail{
-			color : $white;
-			background-color : $glassyBlack;
-			margin-bottom : 20px;
-			@include at-breakpoint($medium) {
-			  @include span-columns(8,12);
+		.tour-header{
+			
+			.tour-title{
+				padding : 20px;
+				margin : 0px 0px;
+				background-color : $glassyWhite;
+				color : $navy;
 			}
-			.tour-detail-title{
-				border-bottom : 1px solid $tingrey;
-				font-size: 120%;
+			margin-bottom : 10px;
+			border-bottom : 1px solid $navy;
+		}
+		.tour-slide{
+			margin-bottom : 10px;		
+			img{
+				width: 100%;
+				max-width : 100%;
+				height : auto;
+				margin : auto;
+			}
+		}
+		.tour-information{
+			background-color : $glassyWhite;
+			margin-bottom : 20px;
+			padding : 20px;
+			.tour-information-title{
+				
 				margin :0;
-				padding : 10px 20px;
+				padding : 0px 20px 10px;
+				border-bottom : 1px solid $grey;
+			}
+			ul.tour-info-list{
+				list-style: none;
+				li{
+
+				}
 			}
 			
 		}
-		.weather-detail{
-			background-color : $glassyWhite;
-			margin-bottom : 20px;
-			.weather-detail-title{
-				font-size: 120%;
-				margin :0;
-				padding : 10px 20px;
-				border-bottom : 1px solid $grey;
-			}
-
-			@include at-breakpoint($medium) {
-			  @include span-columns(4 omega,12);
-			}
-		}
-
 	}
+	
+	
+	
+	.tour-detail{
+		
+		margin-bottom : 20px;
+		@include at-breakpoint($medium) {
+		  @include span-columns(8 omega,12);
+		}
+		.tour-content{
+			background : $glassyWhite;
+			padding : 0;
+			margin-bottom : 20px;
+		}
+		.tour-extra{
+			color : $white;
+			background-color : $glassyBlack;
+			font-size: 120%;
+			margin-bottom : 20px;
+			padding : 10px 20px;
+		}
+		
+	}
+	
 
 }
 .section-title.noback{

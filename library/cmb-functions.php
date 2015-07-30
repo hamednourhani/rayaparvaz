@@ -125,7 +125,7 @@ function rayaparvaz_register_hotel_metabox() {
 		'desc'       => __( 'Region input field', 'rayaparvaz' ),
 		'id'         => $prefix . 'hotel_region',
 		'type'       => 'text',
-		'show_on_cb' => 'rayaparvaz_hide_if_no_cats', // function should return a bool value
+		//'show_on_cb' => 'rayaparvaz_hide_if_no_cats', // function should return a bool value
 		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
 		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
 		// 'on_front'        => false, // Optionally designate a field to wp-admin only
@@ -148,19 +148,7 @@ function rayaparvaz_register_hotel_metabox() {
 		// 'repeatable' => true,
 	) );
 
-	$cmb_demo->add_field( array(
-		'name'             => __( 'Hotel Service', 'rayaparvaz' ),
-		'desc'             => __( 'Hotet services', 'rayaparvaz' ),
-		'id'               => $prefix . 'hotel_service',
-		'type'             => 'radio_inline',
-		'show_option_none' => true,
-		'options'          => array(
-			'u_all' => __( 'U.All', 'rayaparvaz' ),
-			'b_b'   => __( 'B.B', 'rayaparvaz' ),
-			
-		),
-	) );
-
+	
 	$cmb_demo->add_field( array(
 		'name'         => __( 'Slider Images', 'rayaparvaz' ),
 		'desc'         => __( 'Upload or add multiple images/attachments.', 'rayaparvaz' ),
@@ -388,7 +376,49 @@ function rayaparvaz_register_hotel_metabox() {
 
 }
 
+add_action('cmb2_init','rayaparvaz_register_tour_information_metabox');
 
+function rayaparvaz_register_tour_information_metabox(){
+	$prefix2 ='_rayaparvaz_';
+	/**
+	 * Repeatable Field Groups
+	 */
+	$cmb_tour = new_cmb2_box( array(
+		'id'            => $prefix2 . 'tour_metabox',
+		'title'         => __( 'Tour Information', 'rayaparvaz' ),
+		'object_types'  => array( 'tour' ), // Post type
+		// 'show_on_cb' => 'rayaparvaz_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+	) );
+
+	$cmb_tour->add_field( array(
+		'name'       => __( 'Airline', 'rayaparvaz' ),
+		'desc'       => __( 'the name of airline', 'rayaparvaz' ),
+		'id'         => $prefix2 . 'tour_airline',
+		'type'       => 'text',
+		
+	) );
+
+	$cmb_tour->add_field( array(
+		'name'       => __( 'Pickup time', 'rayaparvaz' ),
+		'desc'       => __( 'the pickup time', 'rayaparvaz' ),
+		'id'         => $prefix2 . 'pick_up_time',
+		'type'       => 'text',
+		
+	) );
+
+	$cmb_tour->add_field( array(
+		'name'       => __( 'Landing time', 'rayaparvaz' ),
+		'desc'       => __( 'the landing time', 'rayaparvaz' ),
+		'id'         => $prefix2 . 'landing_time',
+		'type'       => 'text',
+		
+	) );
+}
 
 add_action( 'cmb2_init', 'rayaparvaz_register_repeatable_tour_package_metabox' );
 /**
@@ -398,10 +428,7 @@ function rayaparvaz_register_repeatable_tour_package_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_rayaparvaz_group_';
-
-	/**
-	 * Repeatable Field Groups
-	 */
+	
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'tour_metabox',
 		'title'        => __( 'Tour Packages', 'rayaparvaz' ),
@@ -428,30 +455,21 @@ function rayaparvaz_register_repeatable_tour_package_metabox() {
 	 * The parent field's id needs to be passed as the first argument.
 	 */
 	// WP_Query arguments
-	global $WP_Query,$wp_query;
+	
 	$args = array (
 		'post_type'              => array( 'hotel' ),
-		'posts_per_page'         => '100',
+		'posts_per_page'         => '50',
 	);
 
 
 	// The Query
-	$hotel_list = new WP_Query( $args );
+	$hotel_list = get_posts( $args );
 	//var_dump($hotel_list);
 	$package_hotels = array();
-	// The Loop
-	if ( $hotel_list->have_posts() ) {
-		while ( $hotel_list->have_posts() ) {
-			
-			$package_hotels[the_ID()] = the_title();
-		// do something
-		}
-	} else {
-		// no posts found
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata(); 
+	foreach ( $hotel_list as $post ) : setup_postdata( $post );
+			$package_hotels[$post->ID] = $post->post_title;
+ 	endforeach; 
+ 	//wp_reset_postdata();
 	
 	$cmb_group->add_group_field($group_field_id , array(
 		'name'    => __( 'Hotel Name', 'rayaparvaz' ),
@@ -460,6 +478,19 @@ function rayaparvaz_register_repeatable_tour_package_metabox() {
 		'type'    => 'select',
 		'options' => $package_hotels,
 			
+	) );
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'             => __( 'Hotel Service', 'rayaparvaz' ),
+		'desc'             => __( 'Hotet services', 'rayaparvaz' ),
+		'id'               => 'hotel_service',
+		'type'             => 'radio_inline',
+		'show_option_none' => true,
+		'options'          => array(
+			'u_all' => __( 'U.All', 'rayaparvaz' ),
+			'b_b'   => __( 'B.B', 'rayaparvaz' ),
+			
+		),
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(

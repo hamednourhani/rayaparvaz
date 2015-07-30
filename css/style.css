@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Roya";
-  src: url('fonts/IRRoya.eot?1438099821');
-  src: url('fonts/IRRoya.eot?&1438099821#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438099821') format('truetype'), url('fonts/IRRoya.woff?1438099821') format('woff'); }
+  src: url('fonts/IRRoya.eot?1438228253');
+  src: url('fonts/IRRoya.eot?&1438228253#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438228253') format('truetype'), url('fonts/IRRoya.woff?1438228253') format('woff'); }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -11,7 +11,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -617,7 +617,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -848,7 +848,7 @@ a.site-logo {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -859,14 +859,14 @@ body {
   font-family: "Roya", tahoma;
   font-size: 120%;
   direction: rtl;
-  background-image: url('../images/introBack.jpg?1437849475');
+  background-image: url('../images/introBack.jpg?1437798620');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
   /* line 17, sass/layout/_main.scss */
   body.external-tours {
-    background-image: url('../images/externalBackGround.jpg?1437849475'); }
+    background-image: url('../images/externalBackGround.jpg?1437828655'); }
 
 /* line 21, sass/layout/_main.scss */
 .body-wrapper {
@@ -897,7 +897,7 @@ body {
     color: #001e45;
     font-weight: 500;
     line-height: 300%;
-    background-image: url('../images/external-title.png?1438099822');
+    background-image: url('../images/external-title.png?1437889178');
     background-repeat: no-repeat;
     background-size: 120px;
     background-position: center right 30px; }
@@ -980,101 +980,84 @@ article.archive-tour {
 
 /* line 135, sass/layout/_main.scss */
 article.single-tour {
-  padding-top: 50px; }
-  /* line 137, sass/layout/_main.scss */
-  article.single-tour .tour-header, article.single-tour .tour-slide, article.single-tour .tour-content, article.single-tour .tour-detail, article.single-tour .weather-detail {
+  padding-top: 50px;
+  line-height: 150%; }
+  /* line 139, sass/layout/_main.scss */
+  article.single-tour .tour-content, article.single-tour .tour-extra, article.single-tour .tour-slide,
+  article.single-tour .tour-header, article.single-tour .tour-information {
+    width: 100%; }
+  /* line 143, sass/layout/_main.scss */
+  article.single-tour .tour-detail, article.single-tour .tour-side {
     width: 100%;
     float: right;
     margin-left: 1.69492%;
     display: inline; }
-  /* line 140, sass/layout/_main.scss */
-  article.single-tour .tour-header {
-    margin-bottom: 5px;
+  @media (min-width: 45em) {
+    /* line 146, sass/layout/_main.scss */
+    article.single-tour .tour-side {
+      width: 32.20339%;
+      float: right;
+      margin-left: 1.69492%; } }
+  /* line 150, sass/layout/_main.scss */
+  article.single-tour .tour-side .tour-header {
+    margin-bottom: 10px;
     border-bottom: 1px solid #001e45; }
-    @media (min-width: 45em) {
-      /* line 140, sass/layout/_main.scss */
-      article.single-tour .tour-header {
-        width: 66.10169%;
-        float: right;
-        margin-left: 1.69492%; } }
-    /* line 145, sass/layout/_main.scss */
-    article.single-tour .tour-header .tour-title {
+    /* line 152, sass/layout/_main.scss */
+    article.single-tour .tour-side .tour-header .tour-title {
       padding: 20px;
       margin: 0px 0px;
       background-color: rgba(255, 255, 255, 0.75);
       color: #001e45; }
-  @media (min-width: 45em) {
-    /* line 154, sass/layout/_main.scss */
-    article.single-tour .tour-slide {
-      width: 32.20339%;
-      float: left;
-      margin-left: 0;
-      text-align: center; } }
-  /* line 160, sass/layout/_main.scss */
-  article.single-tour .tour-slide img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: auto; }
-  /* line 167, sass/layout/_main.scss */
-  article.single-tour .tour-content {
-    background: rgba(255, 255, 255, 0.75);
-    padding: 10px 20px;
+  /* line 161, sass/layout/_main.scss */
+  article.single-tour .tour-side .tour-slide {
+    margin-bottom: 10px; }
+    /* line 163, sass/layout/_main.scss */
+    article.single-tour .tour-side .tour-slide img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: auto; }
+  /* line 170, sass/layout/_main.scss */
+  article.single-tour .tour-side .tour-information {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+    padding: 20px; }
+    /* line 174, sass/layout/_main.scss */
+    article.single-tour .tour-side .tour-information .tour-information-title {
+      margin: 0;
+      padding: 0px 20px 10px;
+      border-bottom: 1px solid #aaa; }
+    /* line 180, sass/layout/_main.scss */
+    article.single-tour .tour-side .tour-information ul.tour-info-list {
+      list-style: none; }
+  /* line 192, sass/layout/_main.scss */
+  article.single-tour .tour-detail {
     margin-bottom: 20px; }
     @media (min-width: 45em) {
-      /* line 167, sass/layout/_main.scss */
-      article.single-tour .tour-content {
+      /* line 192, sass/layout/_main.scss */
+      article.single-tour .tour-detail {
         width: 66.10169%;
-        float: right;
-        margin-left: 1.69492%; } }
-  /* line 175, sass/layout/_main.scss */
-  article.single-tour .tour-footer {
-    overflow: hidden;
-    *zoom: 1;
-    width: 100%; }
-    /* line 178, sass/layout/_main.scss */
-    article.single-tour .tour-footer div {
-      padding: 20px; }
-    /* line 181, sass/layout/_main.scss */
-    article.single-tour .tour-footer .tour-detail {
+        float: left;
+        margin-left: 0; } }
+    /* line 198, sass/layout/_main.scss */
+    article.single-tour .tour-detail .tour-content {
+      background: rgba(255, 255, 255, 0.75);
+      padding: 0;
+      margin-bottom: 20px; }
+    /* line 203, sass/layout/_main.scss */
+    article.single-tour .tour-detail .tour-extra {
       color: #fff;
       background-color: rgba(44, 35, 40, 0.65);
-      margin-bottom: 20px; }
-      @media (min-width: 45em) {
-        /* line 181, sass/layout/_main.scss */
-        article.single-tour .tour-footer .tour-detail {
-          width: 66.10169%;
-          float: right;
-          margin-left: 1.69492%; } }
-      /* line 188, sass/layout/_main.scss */
-      article.single-tour .tour-footer .tour-detail .tour-detail-title {
-        border-bottom: 1px solid #ddd;
-        font-size: 120%;
-        margin: 0;
-        padding: 10px 20px; }
-    /* line 196, sass/layout/_main.scss */
-    article.single-tour .tour-footer .weather-detail {
-      background-color: rgba(255, 255, 255, 0.75);
-      margin-bottom: 20px; }
-      /* line 199, sass/layout/_main.scss */
-      article.single-tour .tour-footer .weather-detail .weather-detail-title {
-        font-size: 120%;
-        margin: 0;
-        padding: 10px 20px;
-        border-bottom: 1px solid #aaa; }
-      @media (min-width: 45em) {
-        /* line 196, sass/layout/_main.scss */
-        article.single-tour .tour-footer .weather-detail {
-          width: 32.20339%;
-          float: left;
-          margin-left: 0; } }
+      font-size: 120%;
+      margin-bottom: 20px;
+      padding: 10px 20px; }
 
-/* line 214, sass/layout/_main.scss */
+/* line 215, sass/layout/_main.scss */
 .section-title.noback {
   text-align: center;
   background: none; }
 
-/* line 223, sass/layout/_main.scss */
+/* line 224, sass/layout/_main.scss */
 .hotel-list a.hotel-link {
   background-color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid #001e45;
@@ -1090,7 +1073,7 @@ article.single-tour {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px; }
   @media (min-width: 45em) {
-    /* line 223, sass/layout/_main.scss */
+    /* line 224, sass/layout/_main.scss */
     .hotel-list a.hotel-link {
       width: 74.57627%;
       float: right;
@@ -1098,10 +1081,10 @@ article.single-tour {
       float: none;
       margin: auto;
       margin-bottom: 5px; } }
-  /* line 242, sass/layout/_main.scss */
+  /* line 243, sass/layout/_main.scss */
   .hotel-list a.hotel-link:hover {
     background-color: #ddd; }
-  /* line 247, sass/layout/_main.scss */
+  /* line 248, sass/layout/_main.scss */
   .hotel-list a.hotel-link h3.hotel-name {
     width: 66.10169%;
     float: right;
@@ -1110,23 +1093,23 @@ article.single-tour {
     margin: 0;
     padding: 10px 20px; }
     @media (min-width: 45em) {
-      /* line 247, sass/layout/_main.scss */
+      /* line 248, sass/layout/_main.scss */
       .hotel-list a.hotel-link h3.hotel-name {
         width: 40.67797%;
         float: right;
         margin-left: 1.69492%; } }
-  /* line 257, sass/layout/_main.scss */
+  /* line 258, sass/layout/_main.scss */
   .hotel-list a.hotel-link span.hotel-rate {
     width: 32.20339%;
     float: left;
     margin-left: 0;
     *margin-right: -1em;
     display: inline; }
-    /* line 259, sass/layout/_main.scss */
+    /* line 260, sass/layout/_main.scss */
     .hotel-list a.hotel-link span.hotel-rate > img {
       padding-top: 8px; }
 
-/* line 268, sass/layout/_main.scss */
+/* line 269, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1139,19 +1122,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 277, sass/layout/_main.scss */
+  /* line 278, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 280, sass/layout/_main.scss */
+    /* line 281, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 287, sass/layout/_main.scss */
+  /* line 288, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 290, sass/layout/_main.scss */
+    /* line 291, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 
