@@ -4,7 +4,7 @@
 	
 ?>
 	<table class="tour-table">
-		<tbody>
+		<tbody class="tour-table-body">
 			
 			<tr class="tour-table-header">
 				<th><?php echo __('Hotel Name','rayaparvaz'); ?></th>
@@ -46,14 +46,19 @@
 				} ?>
 
 				<tr class="tour-table-row">
-					<td><a href="<?php echo $hotel_url; ?>"><?php echo $hotel_name; ?></a></td>
+					<td><a href="<?php echo $hotel_url; ?>"><strong><?php echo $hotel_name; ?></strong></a></td>
 					<td><?php echo $hotel_rank; ?></td>
 					<td>
-						<img class="hotel-rate" src='<?php echo get_stylesheet_directory_uri()."/images/star".$hotel_degree.".png"; ?>'/>
+						<img class="hotel-rate" src='<?php echo get_stylesheet_directory_uri()."/images/star".$hotel_degree.".png"; ?>'/><br />
 						 <span "hotel-service">
 						 	<?php  if($hotel_service == "b_b"){
+						 				echo "<span> B.B </span>".'<img src="'.get_stylesheet_directory_uri().'/images/cup.png"/>';
 						 			}elseif($hotel_service == "u_all"){
+						 				echo "<span> U.All </span>".'<img src="'.get_stylesheet_directory_uri().'/images/spoon.png"/>';
+						 			}elseif($hotel_service == "all"){
+						 				echo "<span> All </span>".'<img src="'.get_stylesheet_directory_uri().'/images/spoon.png"/>';		
 						 			}else{
+						 				echo "--";
 						 			}
 						 	?>
 						 </span>

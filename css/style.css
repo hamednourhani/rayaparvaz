@@ -995,7 +995,7 @@ article.single-tour {
   @media (min-width: 45em) {
     /* line 146, sass/layout/_main.scss */
     article.single-tour .tour-side {
-      width: 32.20339%;
+      width: 23.72881%;
       float: right;
       margin-left: 1.69492%; } }
   /* line 150, sass/layout/_main.scss */
@@ -1029,35 +1029,76 @@ article.single-tour {
       border-bottom: 1px solid #aaa; }
     /* line 180, sass/layout/_main.scss */
     article.single-tour .tour-side .tour-information ul.tour-info-list {
+      font-size: 90%;
       list-style: none; }
-  /* line 192, sass/layout/_main.scss */
+      /* line 183, sass/layout/_main.scss */
+      article.single-tour .tour-side .tour-information ul.tour-info-list strong {
+        color: #001e45; }
+  /* line 193, sass/layout/_main.scss */
   article.single-tour .tour-detail {
     margin-bottom: 20px; }
     @media (min-width: 45em) {
-      /* line 192, sass/layout/_main.scss */
+      /* line 193, sass/layout/_main.scss */
       article.single-tour .tour-detail {
-        width: 66.10169%;
+        width: 74.57627%;
         float: left;
         margin-left: 0; } }
-    /* line 198, sass/layout/_main.scss */
+    /* line 199, sass/layout/_main.scss */
     article.single-tour .tour-detail .tour-content {
+      font-size: 90%;
       background: rgba(255, 255, 255, 0.75);
       padding: 0;
       margin-bottom: 20px; }
-    /* line 203, sass/layout/_main.scss */
+    /* line 205, sass/layout/_main.scss */
     article.single-tour .tour-detail .tour-extra {
       color: #fff;
       background-color: rgba(44, 35, 40, 0.65);
       font-size: 120%;
       margin-bottom: 20px;
       padding: 10px 20px; }
+  /* line 214, sass/layout/_main.scss */
+  article.single-tour .tour-content {
+    text-align: center;
+    vertical-align: baseline; }
+    /* line 217, sass/layout/_main.scss */
+    article.single-tour .tour-content img {
+      max-width: 100;
+      vertical-align: baseline; }
+    /* line 221, sass/layout/_main.scss */
+    article.single-tour .tour-content span {
+      vertical-align: top; }
+    /* line 224, sass/layout/_main.scss */
+    article.single-tour .tour-content .tour-table, article.single-tour .tour-content .tour-table-body {
+      width: 100%;
+      max-width: 100%; }
+    /* line 230, sass/layout/_main.scss */
+    article.single-tour .tour-content .tour-table {
+      font-size: 90%; }
+      /* line 232, sass/layout/_main.scss */
+      article.single-tour .tour-content .tour-table a {
+        color: #179BD7; }
+        /* line 235, sass/layout/_main.scss */
+        article.single-tour .tour-content .tour-table a:hover {
+          color: #001e45; }
+      /* line 239, sass/layout/_main.scss */
+      article.single-tour .tour-content .tour-table th {
+        font-size: 90%;
+        border: 1px solid #ddd;
+        line-height: 160%;
+        font-weight: normal;
+        color: #fff;
+        background-color: #179BD7; }
+      /* line 247, sass/layout/_main.scss */
+      article.single-tour .tour-content .tour-table td {
+        border: 1px solid #ddd;
+        padding-top: 5px; }
 
-/* line 215, sass/layout/_main.scss */
+/* line 255, sass/layout/_main.scss */
 .section-title.noback {
   text-align: center;
   background: none; }
 
-/* line 224, sass/layout/_main.scss */
+/* line 264, sass/layout/_main.scss */
 .hotel-list a.hotel-link {
   background-color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid #001e45;
@@ -1073,7 +1114,7 @@ article.single-tour {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px; }
   @media (min-width: 45em) {
-    /* line 224, sass/layout/_main.scss */
+    /* line 264, sass/layout/_main.scss */
     .hotel-list a.hotel-link {
       width: 74.57627%;
       float: right;
@@ -1081,35 +1122,35 @@ article.single-tour {
       float: none;
       margin: auto;
       margin-bottom: 5px; } }
-  /* line 243, sass/layout/_main.scss */
+  /* line 283, sass/layout/_main.scss */
   .hotel-list a.hotel-link:hover {
     background-color: #ddd; }
-  /* line 248, sass/layout/_main.scss */
+  /* line 288, sass/layout/_main.scss */
   .hotel-list a.hotel-link h3.hotel-name {
-    width: 66.10169%;
+    width: 74.57627%;
     float: right;
     margin-left: 1.69492%;
     display: inline;
     margin: 0;
     padding: 10px 20px; }
     @media (min-width: 45em) {
-      /* line 248, sass/layout/_main.scss */
+      /* line 288, sass/layout/_main.scss */
       .hotel-list a.hotel-link h3.hotel-name {
-        width: 40.67797%;
+        width: 49.15254%;
         float: right;
         margin-left: 1.69492%; } }
-  /* line 258, sass/layout/_main.scss */
+  /* line 298, sass/layout/_main.scss */
   .hotel-list a.hotel-link span.hotel-rate {
-    width: 32.20339%;
+    width: 23.72881%;
     float: left;
     margin-left: 0;
     *margin-right: -1em;
     display: inline; }
-    /* line 260, sass/layout/_main.scss */
+    /* line 300, sass/layout/_main.scss */
     .hotel-list a.hotel-link span.hotel-rate > img {
-      padding-top: 8px; }
+      padding-top: 12px; }
 
-/* line 269, sass/layout/_main.scss */
+/* line 309, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1122,19 +1163,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 278, sass/layout/_main.scss */
+  /* line 318, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 281, sass/layout/_main.scss */
+    /* line 321, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 288, sass/layout/_main.scss */
+  /* line 328, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 291, sass/layout/_main.scss */
+    /* line 331, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 

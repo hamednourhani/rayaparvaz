@@ -34,7 +34,7 @@
 
 							<div class="tour-side">
 								<header class="tour-header">
-									<h1 class="tour-title "><?php the_title(); ?></h1>
+									<h3 class="tour-title "><?php the_title(); ?></h3>
 								</header>
 
 								<section class="tour-slide">
@@ -47,13 +47,13 @@
 									</h3>
 									<ul class="tour-info-list">
 										<li>
-											<?php echo __('Airline : ','rayaparvaz').'<span>'.$tour_airline.'</span>'; ?>
+											<?php echo '<strong>'.__('Airline : ','rayaparvaz').'</strong>'.'<span>'.$tour_airline.'</span>'; ?>
 										</li>
 										<li>
-											<?php echo __('Pickup Time : ','rayaparvaz').'<span>'.$tour_pick_up.'</span>'; ?>
+											<?php echo '<strong>'.__('Pickup Time : ','rayaparvaz').'</strong>'.'<span>'.$tour_pick_up.'</span>'; ?>
 										</li>
 										<li>
-											<?php echo __('Landing Time : ','rayaparvaz').'<span>'.$tour_landing.'</span>'; ?>
+											<?php echo '<strong>'.__('Landing Time : ','rayaparvaz').'</strong>'.'<span>'.$tour_landing.'</span>'; ?>
 										</li>
 									</ul>
 								</footer>
