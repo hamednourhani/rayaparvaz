@@ -46,6 +46,19 @@
 							</div>
 
 							<div class="hotel-slider">
+							<?php 
+								    $files = get_post_meta( get_the_ID(), '_rayaparvaz_image_list', 1 );
+								    //var_dump($file);
+
+								    echo '<div class="file-list-wrap">';
+								    // Loop through them and output an image
+								    foreach ( (array) $files as $attachment_id => $attachment_url ) {
+								        echo '<div class="file-list-image">';
+								        echo wp_get_attachment_image( $attachment_id, 'medium' );
+								        echo '</div>';
+								    }
+								    echo '</div>';
+							 ?>
 									
 							</div>
 

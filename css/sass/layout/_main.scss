@@ -323,6 +323,14 @@ article.single-hotel{
 		color : $white;
 		background-color: $glassyBlack;
 	}
+	.hotel-slider{
+		overflow : hidden;
+		display : block;
+		.file-list-image{
+			width :25%;
+			float : right;
+		}
+	}
 }
 
 article.hentry{

@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Roya";
-  src: url('fonts/IRRoya.eot?1438228253');
-  src: url('fonts/IRRoya.eot?&1438228253#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438228253') format('truetype'), url('fonts/IRRoya.woff?1438228253') format('woff'); }
+  src: url('fonts/IRRoya.eot?1438099821');
+  src: url('fonts/IRRoya.eot?&1438099821#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438099821') format('truetype'), url('fonts/IRRoya.woff?1438099821') format('woff'); }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -11,7 +11,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -617,7 +617,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -848,7 +848,7 @@ a.site-logo {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -859,14 +859,14 @@ body {
   font-family: "Roya", tahoma;
   font-size: 120%;
   direction: rtl;
-  background-image: url('../images/introBack.jpg?1437798620');
+  background-image: url('../images/introBack.jpg?1437849475');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
   /* line 17, sass/layout/_main.scss */
   body.external-tours {
-    background-image: url('../images/externalBackGround.jpg?1437828655'); }
+    background-image: url('../images/externalBackGround.jpg?1437849475'); }
 
 /* line 21, sass/layout/_main.scss */
 .body-wrapper {
@@ -897,7 +897,7 @@ body {
     color: #001e45;
     font-weight: 500;
     line-height: 300%;
-    background-image: url('../images/external-title.png?1437889178');
+    background-image: url('../images/external-title.png?1438099822');
     background-repeat: no-repeat;
     background-size: 120px;
     background-position: center right 30px; }
@@ -1175,8 +1175,16 @@ article.single-hotel {
     width: 100%;
     color: #fff;
     background-color: rgba(44, 35, 40, 0.65); }
+  /* line 326, sass/layout/_main.scss */
+  article.single-hotel .hotel-slider {
+    overflow: hidden;
+    display: block; }
+    /* line 329, sass/layout/_main.scss */
+    article.single-hotel .hotel-slider .file-list-image {
+      width: 25%;
+      float: right; }
 
-/* line 328, sass/layout/_main.scss */
+/* line 336, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1189,19 +1197,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 337, sass/layout/_main.scss */
+  /* line 345, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 340, sass/layout/_main.scss */
+    /* line 348, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 347, sass/layout/_main.scss */
+  /* line 355, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 350, sass/layout/_main.scss */
+    /* line 358, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 

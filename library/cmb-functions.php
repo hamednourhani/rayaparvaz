@@ -72,7 +72,7 @@ add_action( 'cmb2_init', 'rayaparvaz_register_background_image_metabox' );
 function rayaparvaz_register_background_image_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_rayaparvaz_about_';
+	$prefix = '_rayaparvaz_';
 
 	/**
 	 * Metabox to be displayed on a single page ID

@@ -302,6 +302,17 @@ function rayaparvaz_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'rayaparvaz' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'rayaparvaz' ) .'</a>';
 }
 
+add_action('wp_head','rayaparvaz_inline_style' );
+function rayaparvaz_inline_style(){
+	$page_id= get_queried_object_id();
+	if(is_singular){
+		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
+		var_dump($background_url);
+		if($background_url){
+			echo '<style> body{background : url('.$background_url.')}</style>';
+		}
+	}
 
+}
 
 ?>
