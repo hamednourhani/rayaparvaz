@@ -43,7 +43,7 @@
 				        $child_with_bed = esc_html( $package['child_with_bed'] );
 				    if ( isset( $package['child_without_bed'] ) )
 				        $child_without_bed = esc_html( $package['child_without_bed'] );
-				} ?>
+				?>
 
 				<tr class="tour-table-row">
 					<td><a href="<?php echo $hotel_url; ?>"><strong><?php echo $hotel_name; ?></strong></a></td>
@@ -68,6 +68,7 @@
 					<td><?php echo $child_with_bed; ?></td>
 					<td><?php echo $child_without_bed; ?></td>
 				</tr>	
+				<?php } ?>
 
 			<?php } ?>
 
