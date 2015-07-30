@@ -1150,7 +1150,33 @@ article.single-tour {
     .hotel-list a.hotel-link span.hotel-rate > img {
       padding-top: 12px; }
 
-/* line 309, sass/layout/_main.scss */
+/* line 308, sass/layout/_main.scss */
+article.single-hotel {
+  width: 100%;
+  float: right;
+  margin-left: 1.69492%;
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 308, sass/layout/_main.scss */
+    article.single-hotel {
+      width: 74.57627%;
+      float: right;
+      margin-left: 1.69492%;
+      float: none;
+      display: block;
+      margin: auto; } }
+  /* line 316, sass/layout/_main.scss */
+  article.single-hotel img {
+    max-width: 100%;
+    height: auto; }
+  /* line 320, sass/layout/_main.scss */
+  article.single-hotel .hotel-slideshow, article.single-hotel .hotel-slider, article.single-hotel .hotel-content {
+    max-width: 100%;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(44, 35, 40, 0.65); }
+
+/* line 328, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1163,19 +1189,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 318, sass/layout/_main.scss */
+  /* line 337, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 321, sass/layout/_main.scss */
+    /* line 340, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 328, sass/layout/_main.scss */
+  /* line 347, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 331, sass/layout/_main.scss */
+    /* line 350, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 

@@ -15,51 +15,51 @@
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header();
+			
+			$hotel_region = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_region', true );
+			$hotel_degree = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_degree', true );
+			$hotel_slides = get_post_meta( get_the_ID(), '_rayaparvaz_file_list', true );
+
+			?>
 
 			<main class="site-main">
 
 				<section class="layout">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" class="single-tour" role="article">
+						<article id="post-<?php the_ID(); ?>" class="single-hotel" role="article">
 
-								<header class="tour-header">
-
-									<h1 class="tour-title "><?php the_title(); ?></h1>
-								</header>
-
-								<section class="tour-slide">
-									<?php the_post_thumbnail(); ?>
-								</section>
-
-								<section class="tour-content cf">
-									<?php the_content(); ?>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
-								</section> <!-- end article section -->
-
-								<footer class="tour-footer">
-									<div class="tour-detail">
-										<h3 class="tour-detail-title">title of x</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
-									</div>
-									<div class="weather-detail">
-										<h3 class="weather-detail-title">title of o</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
-									</div>
-
-								</footer>
-
+							<div class="hotel-slideshow">
 								
+								<div class="hotel-detail">
+									<h3 class="hotel-title "><?php the_title(); ?></h3>
+									<span class="hotel-region">
+										<?php echo __('Hotel Region','rayaparvaz').$hotel_region; ?>
+									</span>
+									
+									<span class="hotel-degree">
+										<?php echo __('Hotel Degree','rayaparvaz').$hotel_degree; ?>
+									</span>
+								</div>
+							</div>
 
-							</article>
+							<div class="hotel-slider">
+									
+							</div>
+
+							<section class="hotel-content cf">
+								<?php the_content(); ?>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
+							</section> <!-- end article section -->
+						</article>
 
 							<?php endwhile; ?>
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="single-tour cf">
+									<article id="post-not-found" class="hotel-slideshow cf">
 										<header class="tour-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
 										</header>

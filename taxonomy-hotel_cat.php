@@ -12,7 +12,9 @@
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+	
+?>
 			<main class="site-main">
 
 				<section class="layout">
@@ -23,12 +25,13 @@
 
 					<div class="hotel-list">
 					
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						
+						<?php if (have_posts()) : while (have_posts()) : the_post(); 
+								$hotel_degree = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_degree', true );
+							?>
 								<a href="<?php the_permalink() ?>" class="hotel-link" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									<h3 class="hotel-name"><?php the_title(); ?></h3>
 									<span class="hotel-rate">
-										<img src="<?php echo get_template_directory_uri();?>/images/star3.png" alt="star3"/>
+										<?php echo '<img src="'.get_template_directory_uri().'/images/star'.$hotel_degree.'.png" alt="star'.$hotel_degree.'"/>'; ?>
 									</span>
 								</a>
 							

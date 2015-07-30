@@ -305,6 +305,25 @@ article.single-tour{
 	}
 
 }
+article.single-hotel{
+	@include span-columns(12,12);
+	@include at-breakpoint($medium) {
+		@include span-columns(9,12);
+		float : none;
+		display : block;
+		margin : auto;	  
+	}
+	img{
+		max-width : 100%;
+		height : auto;
+	}
+	.hotel-slideshow,.hotel-slider,.hotel-content{
+		max-width : 100%;
+		width : 100%;
+		color : $white;
+		background-color: $glassyBlack;
+	}
+}
 
 article.hentry{
 	@include span-columns(12,12);
