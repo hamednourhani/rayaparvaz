@@ -165,7 +165,7 @@ module.exports = function(grunt) {
     			tasks : ['compass:dev','compass:dist','copy:css','clean']
     		},
     		php : {
-    			files : ['**/*.php'],
+    			files : ['*.php','**/*.php'],
     			tasks : ['makepot']
     		},
     		readme: {
