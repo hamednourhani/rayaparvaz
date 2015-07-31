@@ -364,13 +364,13 @@ function rayaparvaz_register_intro_page_metabox() {
 	$cmb_intro_page->add_field( array(
 		'name' => __( 'Internal Tour', 'rayaparvaz' ),
 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'internal_page',
+		'id'   => $prefix . 'internal_tours',
 		'type' => 'text_url',
 	) );
 	$cmb_intro_page->add_field( array(
 		'name' => __( 'External Tour', 'rayaparvaz' ),
 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'external_page',
+		'id'   => $prefix . 'external_tours',
 		'type' => 'text_url',
 	) );
 

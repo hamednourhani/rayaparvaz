@@ -306,10 +306,10 @@ article.single-tour{
 
 }
 article.single-hotel{
-	width : 800px;
 	max-width : 100%;
 	float : none;
 	display : block;
+	padding : auto;
 	margin : auto;	  
 	
 	// img{
@@ -327,6 +327,49 @@ article.single-hotel{
 		background: $glassyBlack;
 		
 		
+	}
+	
+	ul.hotel-detail{
+		
+		padding-bottom : 20px;
+		width : 800px;
+		max-width  : 100%;
+		margin : auto;
+		float : none;
+		list-style : none;
+		li{
+			background-color : $glassyWhite;
+			display : inline-block;
+			padding : 10px;
+			
+			img{
+				padding-bottom : 2px;
+				vertical-align: top;
+			}
+
+		}
+
+	}
+	.hotel-content{
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(9,12);
+			display : block;
+			float : none;
+			margin : auto;
+		}
+		#slider_container{
+			margin : auto;
+		}
+		.hotel-information{
+			width : 800px;
+			margin : 20px auto;
+			max-width : 100%;
+			background-color : $glassyBlack;
+			color : $white;
+			padding : 20px;
+		}
+
 	}
 }
 

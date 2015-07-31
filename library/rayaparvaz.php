@@ -311,7 +311,7 @@ function rayaparvaz_inline_style(){
 		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
 	}elseif(is_archive() || is_tax()){
 		$background_url = apply_filters( 'taxonomy-images-queried-term-image-url', '' );	
-		var_dump($background_url);
+		
 	}
 	if($background_url){
 			echo '<style> body{background-image : url('.$background_url.')}</style>';

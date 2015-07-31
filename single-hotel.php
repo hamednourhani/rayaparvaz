@@ -25,32 +25,31 @@
 
 			<main class="site-main">
 
-				<section class="layout">
+				
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" class="single-hotel" role="article">
 
-							<!-- <div class="hotel-slideshow">
+							<section class="layout">
 								
-								<div class="hotel-detail">
-									<h3 class="hotel-title "><?php the_title(); ?></h3>
-									<span class="hotel-region">
-										<?php echo __('Hotel Region','rayaparvaz').$hotel_region; ?>
-									</span>
+								<ul class="hotel-detail">
+									<li class="hotel-title "><?php the_title(); ?></li>
+									<li class="hotel-region">
+										<?php echo __('Hotel Region : ','rayaparvaz').$hotel_region; ?>
+									</li>
 									
-									<span class="hotel-degree">
-										<?php echo __('Hotel Degree','rayaparvaz').$hotel_degree; ?>
-									</span>
-								</div>
-							</div>
-
-							<div class="hotel-slider">
-							<?php 
-								    
-							 ?>
-									
-							</div> -->
+									<li class="hotel-degree">
+										<?php echo __('Hotel Degree : ','rayaparvaz');?>
+										<img class="hotel-single-rate" src='<?php echo get_stylesheet_directory_uri()."/images/star".$hotel_degree.".png"; ?>'/>
+									</li>
+								</ul>
+							
+							</section>
+						<section class="layout">
+							
+							<div class="hotel-content">
+							
 						
 							<div id="slider_container" style="position: relative; top: 0px; left: 0px; width: 800px;
 						        height: 556px; background: #191919; overflow: hidden;">
@@ -110,16 +109,18 @@
 							        </div>
 								</div> <!-- slider_container -->
 						
-							<section class="hotel-content cf">
+							<section class="hotel-information cf">
 								<?php the_content(); ?>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
 							</section> <!-- end article section -->
-						</article>
+						</div> <!-- hotel-content -->	
+					</section> <!-- layout -->
+				</article>
 
 							<?php endwhile; ?>
 
 							<?php else : ?>
-
+								<section class="layout">
 									<article id="post-not-found" class="hotel-slideshow cf">
 										<header class="tour-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
@@ -131,7 +132,7 @@
 											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'rayaparvaz' ); ?></p>
 										</footer>
 									</article>
-
+								</section>	
 							<?php endif; ?>
 
 						</main>
