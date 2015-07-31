@@ -331,16 +331,25 @@ article.single-hotel{
 	
 	ul.hotel-detail{
 		
-		padding-bottom : 20px;
+		
 		width : 800px;
 		max-width  : 100%;
 		margin : auto;
 		float : none;
 		list-style : none;
 		li{
+			display : block;
+			margin : 10px  auto;
+
+			@include at-breakpoint($medium){
+				display : inline-block;
+				
+			}
 			background-color : $glassyWhite;
-			display : inline-block;
+			
 			padding : 10px;
+			
+
 			
 			img{
 				padding-bottom : 2px;
