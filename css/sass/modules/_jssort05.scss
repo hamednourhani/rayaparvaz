@@ -1,20 +1,12 @@
 
-/* jssor slider thumbnail navigator skin 05 css */
-/*
-.jssort05 .p           (normal)
-.jssort05 .p:hover     (normal mouseover)
-.jssort05 .pav           (active)
-.jssort05 .pav:hover     (active mouseover)
-.jssort05 .pdn           (mousedown)
-*/
-.jssort05 {
+.jssort01 {
 position: absolute;
 /* size of thumbnail navigator container */
 width: 800px;
 height: 100px;
 }
 
-.jssort05 .p {
+.jssort01 .p {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,68 +14,90 @@ height: 100px;
     height: 72px;
 }
 
-.jssort05 .o {
+.jssort01 .t {
     position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 72px;
-    height: 72px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.jssort01 .w {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.jssort01 .c {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 68px;
+    height: 68px;
+    border: #000 2px solid;
+    box-sizing: content-box;
+    background: url(../images/t01.png) -800px -800px no-repeat;
+    _background: none;
+}
+
+.jssort01 .pav .c {
+    top: 2px;
+    _top: 0px;
+    left: 2px;
+    _left: 0px;
+    width: 68px;
+    height: 68px;
+    border: #000 0px solid;
+    _border: #fff 2px solid;
+    background-position: 50% 50%;
+}
+
+.jssort01 .p:hover .c {
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    border: #fff 1px solid;
+    background-position: 50% 50%;
+}
+
+.jssort01 .p.pdn .c {
+    background-position: 50% 50%;
+    width: 68px;
+    height: 68px;
+    border: #000 2px solid;
+}
+
+* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
+    /* ie quirks mode adjust */
+    width /**/: 72px;
+    height /**/: 72px;
+}
+/* jssor slider arrow navigator skin 05 css */
+/*
+.jssora05l                  (normal)
+.jssora05r                  (normal)
+.jssora05l:hover            (normal mouseover)
+.jssora05r:hover            (normal mouseover)
+.jssora05l.jssora05ldn      (mousedown)
+.jssora05r.jssora05rdn      (mousedown)
+*/
+.jssora05l, .jssora05r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../images/a17.png) no-repeat;
     overflow: hidden;
 }
-
-.jssort05 .b {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 72px;
-    height: 72px;
-    border: none;
-}
-
-.jssort05 .f {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 72px;
-    height: 72px;
-    border: none;
-    clip: rect(8px 63px 63px 8px);
-}
-
-.jssort05 .i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 72px;
-    height: 72px;
-    background: #000;
-    filter: alpha(opacity=30);
-    opacity: .3;
-    transition: background-color .6s;
-    -moz-transition: background-color .6s;
-    -webkit-transition: background-color .6s;
-    -o-transition: background-color .6s;
-}
-
-.jssort05 .pav .i {
-    background: #fff;
-    filter: alpha(opacity=80);
-    opacity: .8;
-}
-
-.jssort05 .p:hover .i, .jssort05 .pav:hover .i {
-    background: #fff;
-    filter: alpha(opacity=30);
-    opacity: .3;
-}
-
-.jssort05 .p:hover .i {
-    transition: none;
-    -moz-transition: none;
-    -webkit-transition: none;
-    -o-transition: none;
-}
-
-.jssort05 .p.pdn .i {
-    background: none;
-}
+.jssora05l { background-position: -10px -40px; }
+.jssora05r { background-position: -70px -40px; }
+.jssora05l:hover { background-position: -130px -40px; }
+.jssora05r:hover { background-position: -190px -40px; }
+.jssora05l.jssora05ldn { background-position: -250px -40px; }
+.jssora05r.jssora05rdn { background-position: -310px -40px; }

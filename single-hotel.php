@@ -31,7 +31,7 @@
 
 						<article id="post-<?php the_ID(); ?>" class="single-hotel" role="article">
 
-							<div class="hotel-slideshow">
+							<!-- <div class="hotel-slideshow">
 								
 								<div class="hotel-detail">
 									<h3 class="hotel-title "><?php the_title(); ?></h3>
@@ -47,22 +47,13 @@
 
 							<div class="hotel-slider">
 							<?php 
-								    $files = get_post_meta( get_the_ID(), '_rayaparvaz_image_list', 1 );
-								    //var_dump($file);
-
-								    echo '<div class="file-list-wrap">';
-								    // Loop through them and output an image
-								    foreach ( (array) $files as $attachment_id => $attachment_url ) {
-								        echo '<div class="file-list-image">';
-								        echo wp_get_attachment_image( $attachment_id, 'medium' );
-								        echo '</div>';
-								    }
-								    echo '</div>';
+								    
 							 ?>
 									
-							</div>
+							</div> -->
+						
 							<div id="slider_container" style="position: relative; top: 0px; left: 0px; width: 800px;
-						        height: 456px; background: #24262e; overflow: hidden;">
+						        height: 556px; background: #191919; overflow: hidden;">
 
 						        <!-- Loading Screen -->
 						        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -75,32 +66,50 @@
 						        </div>
 
 						        <!-- Slides Container -->
-						        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
-						            <div>
-						                <img u="image" src="../img/alila/01.jpg" />
-						                <img u="thumb" src="../img/alila/thumb-01.jpg" />
-						            </div>
+						        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 456px; overflow: hidden;">
+						            
+						            	<?php 
+						            		$files = get_post_meta( get_the_ID(), '_rayaparvaz_image_list', 1 );
+										    //var_dump($file);
+										    
+										    // Loop through them and output an image
+										    foreach ( (array) $files as $attachment_id => $attachment_url ) {
+										       echo '<div>' ;
+										        $thumb_url = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
+										        $image_url = wp_get_attachment_image_src( $attachment_id, 'full' );
+										        echo '<img u="image" src="'.$image_url[0].'" />';
+										        echo '<img u="thumb" src="'.$thumb_url[0].'" />';
+										        echo '</div>';
+										    }
+										    
+						            	?>
+						                
+						           
 						            
 						        </div>
+
+						        <span u="arrowleft" class="jssora05l" style="top: 158px; left: 8px;">
+						        </span>
+						        <!-- Arrow Right -->
+						        <span u="arrowright" class="jssora05r" style="top: 158px; right: 8px">
+						        </span>
 						                
 						        <!--#region Thumbnail Navigator Skin Begin -->
 						        <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
 						        
 						        <!-- thumbnail navigator container -->
-						        <div u="thumbnavigator" class="jssort05" style="left: 0px; bottom: 0px;">
-						            <!-- Thumbnail Item Skin Begin -->
-						            <div u="slides" style="cursor: default;">
-						                <div u="prototype" class="p">
-						                    <div class="o">
-						                        <div u="thumbnailtemplate" class="b"></div>
-						                        <div class="i"></div>
-						                        <div u="thumbnailtemplate" class="f"></div>
-						                    </div>
-						                </div>
-						            </div>
-						            <!-- Thumbnail Item Skin End -->
-						        </div>
-
+						        <div u="thumbnavigator" class="jssort01" style="left: 0px; bottom: 0px;">
+							            <!-- Thumbnail Item Skin Begin -->
+							            <div u="slides" style="cursor: default;">
+							                <div u="prototype" class="p">
+							                    <div class=w><div u="thumbnailtemplate" class="t"></div></div>
+							                    <div class=c></div>
+							                </div>
+							            </div>
+							            <!-- Thumbnail Item Skin End -->
+							        </div>
+								</div> <!-- slider_container -->
+						
 							<section class="hotel-content cf">
 								<?php the_content(); ?>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>

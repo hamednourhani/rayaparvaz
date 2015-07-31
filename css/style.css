@@ -1152,39 +1152,22 @@ article.single-tour {
 
 /* line 308, sass/layout/_main.scss */
 article.single-hotel {
-  width: 100%;
-  float: right;
-  margin-left: 1.69492%;
-  display: inline; }
-  @media (min-width: 45em) {
-    /* line 308, sass/layout/_main.scss */
-    article.single-hotel {
-      width: 74.57627%;
-      float: right;
-      margin-left: 1.69492%;
-      float: none;
-      display: block;
-      margin: auto; } }
-  /* line 316, sass/layout/_main.scss */
-  article.single-hotel img {
-    max-width: 100%;
-    height: auto; }
+  width: 800px;
+  max-width: 100%;
+  float: none;
+  display: block;
+  margin: auto; }
   /* line 320, sass/layout/_main.scss */
-  article.single-hotel .hotel-slideshow, article.single-hotel .hotel-slider, article.single-hotel .hotel-content {
-    max-width: 100%;
-    width: 100%;
-    color: #fff;
-    background-color: rgba(44, 35, 40, 0.65); }
-  /* line 326, sass/layout/_main.scss */
   article.single-hotel .hotel-slider {
-    overflow: hidden;
-    display: block; }
-    /* line 329, sass/layout/_main.scss */
-    article.single-hotel .hotel-slider .file-list-image {
-      width: 25%;
-      float: right; }
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 800px;
+    max-width: 100%;
+    height: 456px;
+    background: rgba(44, 35, 40, 0.65); }
 
-/* line 336, sass/layout/_main.scss */
+/* line 333, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1197,19 +1180,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 345, sass/layout/_main.scss */
+  /* line 342, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 348, sass/layout/_main.scss */
+    /* line 345, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 355, sass/layout/_main.scss */
+  /* line 352, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 358, sass/layout/_main.scss */
+    /* line 355, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 
@@ -1312,94 +1295,127 @@ ul.footer-nav {
 /* form style */
 /* table style */
 /* other style */
-/* jssor slider thumbnail navigator skin 05 css */
-/*
-.jssort05 .p           (normal)
-.jssort05 .p:hover     (normal mouseover)
-.jssort05 .pav           (active)
-.jssort05 .pav:hover     (active mouseover)
-.jssort05 .pdn           (mousedown)
-*/
-/* line 10, sass/modules/_jssort05.scss */
-.jssort05 {
+/* line 2, sass/modules/_jssort05.scss */
+.jssort01 {
   position: absolute;
   /* size of thumbnail navigator container */
   width: 800px;
   height: 100px; }
 
-/* line 17, sass/modules/_jssort05.scss */
-.jssort05 .p {
+/* line 9, sass/modules/_jssort05.scss */
+.jssort01 .p {
   position: absolute;
   top: 0;
   left: 0;
   width: 72px;
   height: 72px; }
 
-/* line 25, sass/modules/_jssort05.scss */
-.jssort05 .o {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 72px;
-  height: 72px;
-  overflow: hidden; }
-
-/* line 34, sass/modules/_jssort05.scss */
-.jssort05 .b {
+/* line 17, sass/modules/_jssort05.scss */
+.jssort01 .t {
   position: absolute;
   top: 0;
   left: 0;
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  height: 100%;
   border: none; }
 
-/* line 43, sass/modules/_jssort05.scss */
-.jssort05 .f {
+/* line 26, sass/modules/_jssort05.scss */
+.jssort01 .w {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 72px;
-  height: 72px;
-  border: none;
-  clip: rect(8px 63px 63px 8px); }
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%; }
 
-/* line 53, sass/modules/_jssort05.scss */
-.jssort05 .i {
+/* line 34, sass/modules/_jssort05.scss */
+.jssort01 .c {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 72px;
-  height: 72px;
-  background: #000;
-  filter: alpha(opacity=30);
-  opacity: .3;
-  transition: background-color .6s;
-  -moz-transition: background-color .6s;
-  -webkit-transition: background-color .6s;
-  -o-transition: background-color .6s; }
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  border: #000 2px solid;
+  box-sizing: content-box;
+  background: url(../images/t01.png) -800px -800px no-repeat;
+  _background: none; }
 
-/* line 68, sass/modules/_jssort05.scss */
-.jssort05 .pav .i {
-  background: #fff;
-  filter: alpha(opacity=80);
-  opacity: .8; }
+/* line 46, sass/modules/_jssort05.scss */
+.jssort01 .pav .c {
+  top: 2px;
+  _top: 0px;
+  left: 2px;
+  _left: 0px;
+  width: 68px;
+  height: 68px;
+  border: #000 0px solid;
+  _border: #fff 2px solid;
+  background-position: 50% 50%; }
+
+/* line 58, sass/modules/_jssort05.scss */
+.jssort01 .p:hover .c {
+  top: 0px;
+  left: 0px;
+  width: 70px;
+  height: 70px;
+  border: #fff 1px solid;
+  background-position: 50% 50%; }
+
+/* line 67, sass/modules/_jssort05.scss */
+.jssort01 .p.pdn .c {
+  background-position: 50% 50%;
+  width: 68px;
+  height: 68px;
+  border: #000 2px solid; }
 
 /* line 74, sass/modules/_jssort05.scss */
-.jssort05 .p:hover .i, .jssort05 .pav:hover .i {
-  background: #fff;
-  filter: alpha(opacity=30);
-  opacity: .3; }
+* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
+  /* ie quirks mode adjust */
+  width: 72px;
+  height: 72px; }
 
-/* line 80, sass/modules/_jssort05.scss */
-.jssort05 .p:hover .i {
-  transition: none;
-  -moz-transition: none;
-  -webkit-transition: none;
-  -o-transition: none; }
+/* jssor slider arrow navigator skin 05 css */
+/*
+.jssora05l                  (normal)
+.jssora05r                  (normal)
+.jssora05l:hover            (normal mouseover)
+.jssora05r:hover            (normal mouseover)
+.jssora05l.jssora05ldn      (mousedown)
+.jssora05r.jssora05rdn      (mousedown)
+*/
+/* line 88, sass/modules/_jssort05.scss */
+.jssora05l, .jssora05r {
+  display: block;
+  position: absolute;
+  /* size of arrow element */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url(../images/a17.png) no-repeat;
+  overflow: hidden; }
 
-/* line 87, sass/modules/_jssort05.scss */
-.jssort05 .p.pdn .i {
-  background: none; }
+/* line 98, sass/modules/_jssort05.scss */
+.jssora05l {
+  background-position: -10px -40px; }
+
+/* line 99, sass/modules/_jssort05.scss */
+.jssora05r {
+  background-position: -70px -40px; }
+
+/* line 100, sass/modules/_jssort05.scss */
+.jssora05l:hover {
+  background-position: -130px -40px; }
+
+/* line 101, sass/modules/_jssort05.scss */
+.jssora05r:hover {
+  background-position: -190px -40px; }
+
+/* line 102, sass/modules/_jssort05.scss */
+.jssora05l.jssora05ldn {
+  background-position: -250px -40px; }
+
+/* line 103, sass/modules/_jssort05.scss */
+.jssora05r.jssora05rdn {
+  background-position: -310px -40px; }
 
 /* setting style */
 /* utilities style */

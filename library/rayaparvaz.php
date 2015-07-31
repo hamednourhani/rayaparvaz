@@ -305,13 +305,16 @@ function rayaparvaz_excerpt_more($more) {
 
 add_action('wp_head','rayaparvaz_inline_style' );
 function rayaparvaz_inline_style(){
+	$background_url = null;
 	$page_id= get_queried_object_id();
-	if(is_singular){
+	if(is_singular()){
 		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
+	}elseif(is_archive() || is_tax()){
+		$background_url = apply_filters( 'taxonomy-images-queried-term-image-url', '' );	
 		var_dump($background_url);
-		if($background_url){
+	}
+	if($background_url){
 			echo '<style> body{background-image : url('.$background_url.')}</style>';
-		}
 	}
 
 }
