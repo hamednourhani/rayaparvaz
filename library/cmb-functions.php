@@ -21,6 +21,36 @@ if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/CMB2/init.php';
 }
 
+
+function ed_metabox_include_front_page( $display, $meta_box ) {
+    if ( ! isset( $meta_box['show_on']['key'] ) ) {
+        return $display;
+    }
+
+    if ( 'front-page' !== $meta_box['show_on']['key'] ) {
+        return $display;
+    }
+
+    $post_id = 0;
+
+    // If we're showing it based on ID, get the current ID
+    if ( isset( $_GET['post'] ) ) {
+        $post_id = $_GET['post'];
+    } elseif ( isset( $_POST['post_ID'] ) ) {
+        $post_id = $_POST['post_ID'];
+    }
+
+    if ( ! $post_id ) {
+        return !$display;
+    }
+
+    // Get ID of page set as front page, 0 if there isn't one
+    $front_page = get_option( 'page_on_front' );
+
+    // there is a front page set and we're on it!
+    return $post_id == $front_page;
+}
+//add_filter( 'cmb2_show_on', 'ed_metabox_include_front_page', 10, 2 );
 /**
  * Conditionally displays a metabox when used as a callback in the 'show_on_cb' rayaparvaz_box parameter
  *
@@ -309,114 +339,150 @@ function rayaparvaz_register_repeatable_tour_package_metabox() {
 
 	
 }
+add_action( 'cmb2_init', 'rayaparvaz_register_intro_page_metabox' );
+/**
+ * Hook in and add a metabox that only appears on the 'About' page
+ */
+function rayaparvaz_register_intro_page_metabox() {
 
-add_action( 'cmb2_init', 'rayaparvaz_register_user_profile_metabox' );
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_rayaparvaz_intro_';
+
+	/**
+	 * Metabox to be displayed on a single page ID
+	 */
+	$cmb_intro_page = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => __( 'Intro Page Links Metabox', 'rayaparvaz' ),
+		'object_types' => array( 'page', ), // Post type
+		'context'      => 'normal',
+		'priority'     => 'high',
+		'show_names'   => true, // Show field names on the left
+		//'show_on'      => 'ed_metabox_include_front_page',//array( 'key' => 'page-template', 'value' => 'template-contact.php' ),, // Specific post IDs to display this metabox
+	) );
+
+	$cmb_intro_page->add_field( array(
+		'name' => __( 'Internal Tour', 'rayaparvaz' ),
+		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+		'id'   => $prefix . 'internal_page',
+		'type' => 'text_url',
+	) );
+	$cmb_intro_page->add_field( array(
+		'name' => __( 'External Tour', 'rayaparvaz' ),
+		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+		'id'   => $prefix . 'external_page',
+		'type' => 'text_url',
+	) );
+
+}
+
+// add_action( 'cmb2_init', 'rayaparvaz_register_user_profile_metabox' );
 /**
  * Hook in and add a metabox to add fields to the user profile pages
  */
-function rayaparvaz_register_user_profile_metabox() {
+// function rayaparvaz_register_user_profile_metabox() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_rayaparvaz_user_';
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$prefix = '_rayaparvaz_user_';
 
-	/**
-	 * Metabox for the user profile screen
-	 */
-	$cmb_user = new_cmb2_box( array(
-		'id'               => $prefix . 'edit',
-		'title'            => __( 'User Profile Metabox', 'rayaparvaz' ),
-		'object_types'     => array( 'user' ), // Tells rayaparvaz to use user_meta vs post_meta
-		'show_names'       => true,
-		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
-	) );
+// 	/**
+// 	 * Metabox for the user profile screen
+// 	 */
+// 	$cmb_user = new_cmb2_box( array(
+// 		'id'               => $prefix . 'edit',
+// 		'title'            => __( 'User Profile Metabox', 'rayaparvaz' ),
+// 		'object_types'     => array( 'user' ), // Tells rayaparvaz to use user_meta vs post_meta
+// 		'show_names'       => true,
+// 		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name'     => __( 'Extra Info', 'rayaparvaz' ),
-		'desc'     => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'       => $prefix . 'extra_info',
-		'type'     => 'title',
-		'on_front' => false,
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name'     => __( 'Extra Info', 'rayaparvaz' ),
+// 		'desc'     => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'       => $prefix . 'extra_info',
+// 		'type'     => 'title',
+// 		'on_front' => false,
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name'    => __( 'Avatar', 'rayaparvaz' ),
-		'desc'    => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'      => $prefix . 'avatar',
-		'type'    => 'file',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name'    => __( 'Avatar', 'rayaparvaz' ),
+// 		'desc'    => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'      => $prefix . 'avatar',
+// 		'type'    => 'file',
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name' => __( 'Facebook URL', 'rayaparvaz' ),
-		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'facebookurl',
-		'type' => 'text_url',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name' => __( 'Facebook URL', 'rayaparvaz' ),
+// 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'   => $prefix . 'facebookurl',
+// 		'type' => 'text_url',
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name' => __( 'Twitter URL', 'rayaparvaz' ),
-		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'twitterurl',
-		'type' => 'text_url',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name' => __( 'Twitter URL', 'rayaparvaz' ),
+// 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'   => $prefix . 'twitterurl',
+// 		'type' => 'text_url',
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name' => __( 'Google+ URL', 'rayaparvaz' ),
-		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'googleplusurl',
-		'type' => 'text_url',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name' => __( 'Google+ URL', 'rayaparvaz' ),
+// 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'   => $prefix . 'googleplusurl',
+// 		'type' => 'text_url',
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name' => __( 'Linkedin URL', 'rayaparvaz' ),
-		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'linkedinurl',
-		'type' => 'text_url',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name' => __( 'Linkedin URL', 'rayaparvaz' ),
+// 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'   => $prefix . 'linkedinurl',
+// 		'type' => 'text_url',
+// 	) );
 
-	$cmb_user->add_field( array(
-		'name' => __( 'User Field', 'rayaparvaz' ),
-		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'   => $prefix . 'user_text_field',
-		'type' => 'text',
-	) );
+// 	$cmb_user->add_field( array(
+// 		'name' => __( 'User Field', 'rayaparvaz' ),
+// 		'desc' => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'   => $prefix . 'user_text_field',
+// 		'type' => 'text',
+// 	) );
 
-}
+// }
 
-add_action( 'cmb2_init', 'rayaparvaz_register_theme_options_metabox' );
-/**
- * Hook in and register a metabox to handle a theme options page
- */
-function rayaparvaz_register_theme_options_metabox() {
+// add_action( 'cmb2_init', 'rayaparvaz_register_theme_options_metabox' );
+// /**
+//  * Hook in and register a metabox to handle a theme options page
+//  */
+// function rayaparvaz_register_theme_options_metabox() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$option_key = '_rayaparvaz_theme_options';
+// 	// Start with an underscore to hide fields from custom fields list
+// 	$option_key = '_rayaparvaz_theme_options';
 
-	/**
-	 * Metabox for an options page. Will not be added automatically, but needs to be called with
-	 * the `rayaparvaz_metabox_form` helper function. See wiki for more info.
-	 */
-	$cmb_options = new_cmb2_box( array(
-		'id'      => $option_key . 'page',
-		'title'   => __( 'Theme Options Metabox', 'rayaparvaz' ),
-		'hookup'  => false, // Do not need the normal user/post hookup
-		'show_on' => array(
-			// These are important, don't remove
-			'key'   => 'options-page',
-			'value' => array( $option_key )
-		),
-	) );
+// 	/**
+// 	 * Metabox for an options page. Will not be added automatically, but needs to be called with
+// 	 * the `rayaparvaz_metabox_form` helper function. See wiki for more info.
+// 	 */
+// 	$cmb_options = new_cmb2_box( array(
+// 		'id'      => $option_key . 'page',
+// 		'title'   => __( 'Theme Options Metabox', 'rayaparvaz' ),
+// 		'hookup'  => false, // Do not need the normal user/post hookup
+// 		'show_on' => array(
+// 			// These are important, don't remove
+// 			'key'   => 'options-page',
+// 			'value' => array( $option_key )
+// 		),
+// 	) );
 
-	/**
-	 * Options fields ids only need
-	 * to be unique within this option group.
-	 * Prefix is not needed.
-	 */
-	$cmb_options->add_field( array(
-		'name'    => __( 'Site Background Color', 'rayaparvaz' ),
-		'desc'    => __( 'field description (optional)', 'rayaparvaz' ),
-		'id'      => 'bg_color',
-		'type'    => 'colorpicker',
-		'default' => '#ffffff',
-	) );
+// 	/**
+// 	 * Options fields ids only need
+// 	 * to be unique within this option group.
+// 	 * Prefix is not needed.
+// 	 */
+// 	$cmb_options->add_field( array(
+// 		'name'    => __( 'Site Background Color', 'rayaparvaz' ),
+// 		'desc'    => __( 'field description (optional)', 'rayaparvaz' ),
+// 		'id'      => 'bg_color',
+// 		'type'    => 'colorpicker',
+// 		'default' => '#ffffff',
+// 	) );
 
-}
+// }
