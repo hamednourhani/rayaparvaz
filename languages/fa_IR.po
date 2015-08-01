@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rayaparvaz\n"
 "POT-Creation-Date: 2015-07-31 19:37+0330\n"
-"PO-Revision-Date: 2015-08-01 08:51+0430\n"
+"PO-Revision-Date: 2015-08-01 12:02+0430\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "Language: fa_IR\n"
@@ -306,7 +306,7 @@ msgstr "ساخت پکیج های تور"
 
 #: library/cmb-functions.php:259
 msgid "Hotel {#}"
-msgstr "هتل  {#}"
+msgstr "پکیج  {#}"
 
 #: library/cmb-functions.php:260
 msgid "Add Another Hotel"

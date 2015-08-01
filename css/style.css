@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Roya";
-  src: url('fonts/IRRoya.eot?1438099821');
-  src: url('fonts/IRRoya.eot?&1438099821#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438099821') format('truetype'), url('fonts/IRRoya.woff?1438099821') format('woff'); }
+  src: url('fonts/IRRoya.eot?1438228253');
+  src: url('fonts/IRRoya.eot?&1438228253#iefix') format('embedded-opentype'), url('fonts/IRRoya.ttf?1438228253') format('truetype'), url('fonts/IRRoya.woff?1438228253') format('woff'); }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -11,7 +11,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -617,7 +617,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -848,7 +848,7 @@ a.site-logo {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -859,14 +859,14 @@ body {
   font-family: "Roya", tahoma;
   font-size: 120%;
   direction: rtl;
-  background-image: url('../images/introBack.jpg?1437849475');
+  background-image: url('../images/introBack.jpg?1437798620');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
   /* line 17, sass/layout/_main.scss */
   body.external-tours {
-    background-image: url('../images/externalBackGround.jpg?1437849475'); }
+    background-image: url('../images/externalBackGround.jpg?1437828655'); }
 
 /* line 21, sass/layout/_main.scss */
 .body-wrapper {
@@ -897,7 +897,7 @@ body {
     color: #001e45;
     font-weight: 500;
     line-height: 300%;
-    background-image: url('../images/external-title.png?1438099822');
+    background-image: url('../images/external-title.png?1437889178');
     background-repeat: no-repeat;
     background-size: 120px;
     background-position: center right 30px; }
@@ -1087,18 +1087,20 @@ article.single-tour {
         line-height: 160%;
         font-weight: normal;
         color: #fff;
-        background-color: #179BD7; }
-      /* line 247, sass/layout/_main.scss */
+        background-color: #179BD7;
+        width: 14%; }
+      /* line 248, sass/layout/_main.scss */
       article.single-tour .tour-content .tour-table td {
         border: 1px solid #ddd;
-        padding-top: 5px; }
+        padding-top: 5px;
+        width: 14%; }
 
-/* line 255, sass/layout/_main.scss */
+/* line 257, sass/layout/_main.scss */
 .section-title.noback {
   text-align: center;
   background: none; }
 
-/* line 264, sass/layout/_main.scss */
+/* line 266, sass/layout/_main.scss */
 .hotel-list a.hotel-link {
   background-color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid #001e45;
@@ -1114,7 +1116,7 @@ article.single-tour {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px; }
   @media (min-width: 45em) {
-    /* line 264, sass/layout/_main.scss */
+    /* line 266, sass/layout/_main.scss */
     .hotel-list a.hotel-link {
       width: 74.57627%;
       float: right;
@@ -1122,10 +1124,10 @@ article.single-tour {
       float: none;
       margin: auto;
       margin-bottom: 5px; } }
-  /* line 283, sass/layout/_main.scss */
+  /* line 285, sass/layout/_main.scss */
   .hotel-list a.hotel-link:hover {
     background-color: #ddd; }
-  /* line 288, sass/layout/_main.scss */
+  /* line 290, sass/layout/_main.scss */
   .hotel-list a.hotel-link h3.hotel-name {
     width: 74.57627%;
     float: right;
@@ -1134,30 +1136,30 @@ article.single-tour {
     margin: 0;
     padding: 10px 20px; }
     @media (min-width: 45em) {
-      /* line 288, sass/layout/_main.scss */
+      /* line 290, sass/layout/_main.scss */
       .hotel-list a.hotel-link h3.hotel-name {
         width: 49.15254%;
         float: right;
         margin-left: 1.69492%; } }
-  /* line 298, sass/layout/_main.scss */
+  /* line 300, sass/layout/_main.scss */
   .hotel-list a.hotel-link span.hotel-rate {
     width: 23.72881%;
     float: left;
     margin-left: 0;
     *margin-right: -1em;
     display: inline; }
-    /* line 300, sass/layout/_main.scss */
+    /* line 302, sass/layout/_main.scss */
     .hotel-list a.hotel-link span.hotel-rate > img {
       padding-top: 12px; }
 
-/* line 308, sass/layout/_main.scss */
+/* line 310, sass/layout/_main.scss */
 article.single-hotel {
   max-width: 100%;
   float: none;
   display: block;
   padding: auto;
   margin: auto; }
-  /* line 320, sass/layout/_main.scss */
+  /* line 322, sass/layout/_main.scss */
   article.single-hotel .hotel-slider {
     position: relative;
     top: 0px;
@@ -1166,35 +1168,35 @@ article.single-hotel {
     max-width: 100%;
     height: 456px;
     background: rgba(44, 35, 40, 0.65); }
-  /* line 332, sass/layout/_main.scss */
+  /* line 334, sass/layout/_main.scss */
   article.single-hotel ul.hotel-detail {
     width: 800px;
     max-width: 100%;
     margin: auto;
     float: none;
     list-style: none; }
-    /* line 340, sass/layout/_main.scss */
+    /* line 342, sass/layout/_main.scss */
     article.single-hotel ul.hotel-detail li {
       display: block;
       margin: 10px  auto;
       background-color: rgba(255, 255, 255, 0.75);
       padding: 10px; }
       @media (min-width: 45em) {
-        /* line 340, sass/layout/_main.scss */
+        /* line 342, sass/layout/_main.scss */
         article.single-hotel ul.hotel-detail li {
           display: inline-block; } }
-      /* line 354, sass/layout/_main.scss */
+      /* line 356, sass/layout/_main.scss */
       article.single-hotel ul.hotel-detail li img {
         padding-bottom: 2px;
         vertical-align: top; }
-  /* line 362, sass/layout/_main.scss */
+  /* line 364, sass/layout/_main.scss */
   article.single-hotel .hotel-content {
     width: 100%;
     float: right;
     margin-left: 1.69492%;
     display: inline; }
     @media (min-width: 45em) {
-      /* line 362, sass/layout/_main.scss */
+      /* line 364, sass/layout/_main.scss */
       article.single-hotel .hotel-content {
         width: 74.57627%;
         float: right;
@@ -1202,10 +1204,10 @@ article.single-hotel {
         display: block;
         float: none;
         margin: auto; } }
-    /* line 370, sass/layout/_main.scss */
+    /* line 372, sass/layout/_main.scss */
     article.single-hotel .hotel-content #slider_container {
       margin: auto; }
-    /* line 373, sass/layout/_main.scss */
+    /* line 375, sass/layout/_main.scss */
     article.single-hotel .hotel-content .hotel-information {
       width: 800px;
       margin: 20px auto;
@@ -1214,7 +1216,7 @@ article.single-hotel {
       color: #fff;
       padding: 20px; }
 
-/* line 385, sass/layout/_main.scss */
+/* line 387, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1227,19 +1229,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.75); }
-  /* line 394, sass/layout/_main.scss */
+  /* line 396, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 397, sass/layout/_main.scss */
+    /* line 399, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 404, sass/layout/_main.scss */
+  /* line 406, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.65);
     color: #fff; }
-    /* line 407, sass/layout/_main.scss */
+    /* line 409, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 
