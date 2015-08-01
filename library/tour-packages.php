@@ -25,8 +25,9 @@
 			    if ( isset( $package['package_hotel'] ) ) {
 			        $hotel_id = esc_html( $package['package_hotel'] );
 			    	
-			    	$hotel_name = get_the_title( $hotel_id );
-			    	$hotel_url = get_permalink($hotel_id);
+			    	
+			    	$hotel_name = get_the_title($hotel_id);
+			    	$hotel_url = post_permalink($hotel_id);
 
 			    	$hotel_rank = esc_html(get_post_meta( $hotel_id, '_rayaparvaz_hotel_rank', true ));
 			    	$hotel_degree = esc_html(get_post_meta( $hotel_id, '_rayaparvaz_hotel_degree', true ));

@@ -66,8 +66,7 @@
 								</div> <!-- end article section -->
 								
 								<div class="tour-extra">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloribus dicta expedita ipsum omnis quis deleniti voluptas quod, molestiae earum.</p>
-									<?php the_content(); ?>
+									
 								</div>
 						
 							</div>

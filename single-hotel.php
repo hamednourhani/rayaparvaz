@@ -111,7 +111,7 @@
 						
 							<section class="hotel-information cf">
 								<?php the_content(); ?>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, vel, unde? Commodi dolorum cupiditate quos rerum quod voluptas ut esse ratione necessitatibus ad libero, laboriosam rem optio voluptatum alias, dolore saepe hic reiciendis fugit adipisci. Quaerat enim nobis, provident alias!</p>
+								
 							</section> <!-- end article section -->
 						</div> <!-- hotel-content -->	
 					</section> <!-- layout -->
