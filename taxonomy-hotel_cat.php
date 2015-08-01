@@ -18,7 +18,7 @@
 			<main class="site-main">
 
 				<section class="layout">
-						<h1 class="section-title noback"><?php echo __('List ','rayaparvaz').single_cat_title(); ?></h1>
+						<h1 class="section-title noback"><?php echo single_cat_title(); ?></h1>
 				</section>
 
 				<section class="layout ">
@@ -31,7 +31,8 @@
 								<a href="<?php the_permalink() ?>" class="hotel-link" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									<h3 class="hotel-name"><?php the_title(); ?></h3>
 									<span class="hotel-rate">
-										<?php echo '<img src="'.get_template_directory_uri().'/images/star'.$hotel_degree.'.png" alt="star'.$hotel_degree.'"/>'; ?>
+										<?php 
+											echo '<img src="'.get_template_directory_uri().'/images/star'.$hotel_degree.'.png" alt="star'.$hotel_degree.'"/>'; ?>
 									</span>
 								</a>
 							
