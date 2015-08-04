@@ -66,7 +66,7 @@
 								</div> <!-- end article section -->
 								
 								<div class="tour-extra">
-									
+									<?php the_content(); ?>
 								</div>
 						
 							</div>
