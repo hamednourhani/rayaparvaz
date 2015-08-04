@@ -152,11 +152,11 @@ article.single-tour{
 			.tour-title{
 				padding : 20px;
 				margin : 0px 0px;
-				background-color : $glassyWhite;
-				color : $navy;
+				background-color : $glassyBlack;
+				color : $white;
 			}
 			margin-bottom : 10px;
-			border-bottom : 1px solid $navy;
+			//border-bottom : 1px solid $navy;
 		}
 		.tour-slide{
 			margin-bottom : 10px;		
@@ -168,20 +168,21 @@ article.single-tour{
 			}
 		}
 		.tour-information{
-			background-color : $glassyWhite;
+			color : $white;
+			background-color : $glassyBlack;
 			margin-bottom : 20px;
 			padding : 20px;
 			.tour-information-title{
-				
+				color : $white;
 				margin :0;
 				padding : 0px 20px 10px;
-				border-bottom : 1px solid $grey;
+				border-bottom : 1px solid $white;
 			}
 			ul.tour-info-list{
 				font-size : 90%;
 				list-style: none;
 				strong {
-					color : $navy;
+					color : $white;
 				}
 			}
 			
@@ -246,6 +247,7 @@ article.single-tour{
 			width: 14%;
 		}
 		td{
+			font-family: $bYekan;
 			border : 1px solid $tingrey;
 			padding-top : 5px;
 			width: 14%;
@@ -254,11 +256,72 @@ article.single-tour{
 }	
 
 }
-.section-title.noback{
-	text-align : center;
-	background : none;
-}
 
+.hotel-cat-title{
+	color : $white;
+	font-weight: inherit;
+	margin : 10px;
+}
+.hotel-cat-description{
+	margin :10px;
+	background-color : $glassyBlack;
+	color : $white;
+	font-weight: inherit;
+	min-height : 0px;
+	display : inline-block;
+	&>p{
+		margin : 0;
+		padding : 10px;
+	}
+}
+ul.hotel-subclass{
+	padding : 0px;
+	padding-bottom: 30px;
+    overflow: hidden;
+}
+li.hotel-subcat-list{
+	position : relative;
+	@include span-columns(12,12);
+	overflow : hidden;
+	height : 500px;
+	.hotel-subcat-title{
+		display : block;
+		background-color: $tingrey;
+		color : $navy;
+		position : absolute;
+		bottom : 10px;
+		margin: 0;
+    	width: 100%;
+    	min-height: 50px;
+    	padding: 10px;
+	}
+	@include at-breakpoint($small $medium) {
+	  
+		@include span-columns(4,12);
+		&:nth-child(3n){
+			@include span-columns(4 omega,12);
+		}
+	}
+	@include at-breakpoint($medium $larg) {
+	  
+		@include span-columns(3,12);
+		&:nth-child(4n){
+			@include span-columns(3 omega,12);
+		}
+	}
+	@include at-breakpoint($larg) {
+	  
+		@include span-columns(2,12);
+		&:nth-child(6n){
+			@include span-columns(2 omega,12);
+		}
+	}
+	img{
+		position :relative;
+		max-height:100%;
+		left : 30%;
+	}
+}
 .hotel-list{
 	
 	
@@ -347,8 +410,8 @@ article.single-hotel{
 				display : inline-block;
 				
 			}
-			background-color : $glassyWhite;
-			
+			background-color : $glassyBlack;
+			color : $white;
 			padding : 10px;
 			
 

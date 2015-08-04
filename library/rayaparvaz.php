@@ -310,7 +310,12 @@ function rayaparvaz_inline_style(){
 	if(is_singular()){
 		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
 	}elseif(is_archive() || is_tax()){
-		$background_url = apply_filters( 'taxonomy-images-queried-term-image-url', '' );	
+		$params = array(
+		  'term_id' => null,
+		  'size' => 'full'
+		);
+		$background_url = category_image_src( $params , false );
+		//$background_url = apply_filters( 'taxonomy-images-queried-term-image-url', '' );	
 		
 	}
 	if($background_url){
