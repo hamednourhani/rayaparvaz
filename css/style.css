@@ -1093,21 +1093,23 @@ article.single-tour {
         font-weight: normal;
         color: #fff;
         background-color: #179BD7;
-        width: 14%; }
-      /* line 249, sass/layout/_main.scss */
+        width: 14%;
+        font-size: 120%; }
+      /* line 251, sass/layout/_main.scss */
       article.single-tour .tour-content .tour-table td {
         font-family: "BYekan", tahoma;
         border: 1px solid #ddd;
         padding-top: 5px;
-        width: 14%; }
+        width: 14%;
+        font-size: 120%; }
 
-/* line 260, sass/layout/_main.scss */
+/* line 263, sass/layout/_main.scss */
 .hotel-cat-title {
   color: #fff;
   font-weight: inherit;
   margin: 10px; }
 
-/* line 265, sass/layout/_main.scss */
+/* line 268, sass/layout/_main.scss */
 .hotel-cat-description {
   margin: 10px;
   background-color: rgba(44, 35, 40, 0.85);
@@ -1115,18 +1117,18 @@ article.single-tour {
   font-weight: inherit;
   min-height: 0px;
   display: inline-block; }
-  /* line 272, sass/layout/_main.scss */
+  /* line 275, sass/layout/_main.scss */
   .hotel-cat-description > p {
     margin: 0;
     padding: 10px; }
 
-/* line 277, sass/layout/_main.scss */
+/* line 280, sass/layout/_main.scss */
 ul.hotel-subclass {
   padding: 0px;
   padding-bottom: 30px;
   overflow: hidden; }
 
-/* line 282, sass/layout/_main.scss */
+/* line 285, sass/layout/_main.scss */
 li.hotel-subcat-list {
   position: relative;
   width: 100%;
@@ -1135,7 +1137,7 @@ li.hotel-subcat-list {
   display: inline;
   overflow: hidden;
   height: 500px; }
-  /* line 287, sass/layout/_main.scss */
+  /* line 290, sass/layout/_main.scss */
   li.hotel-subcat-list .hotel-subcat-title {
     display: block;
     background-color: #ddd;
@@ -1147,45 +1149,45 @@ li.hotel-subcat-list {
     min-height: 50px;
     padding: 10px; }
   @media (min-width: 30em) and (max-width: 45em) {
-    /* line 282, sass/layout/_main.scss */
+    /* line 285, sass/layout/_main.scss */
     li.hotel-subcat-list {
       width: 32.20339%;
       float: right;
       margin-left: 1.69492%; }
-      /* line 301, sass/layout/_main.scss */
+      /* line 304, sass/layout/_main.scss */
       li.hotel-subcat-list:nth-child(3n) {
         width: 32.20339%;
         float: left;
         margin-left: 0; } }
   @media (min-width: 45em) and (max-width: 75em) {
-    /* line 282, sass/layout/_main.scss */
+    /* line 285, sass/layout/_main.scss */
     li.hotel-subcat-list {
       width: 23.72881%;
       float: right;
       margin-left: 1.69492%; }
-      /* line 308, sass/layout/_main.scss */
+      /* line 311, sass/layout/_main.scss */
       li.hotel-subcat-list:nth-child(4n) {
         width: 23.72881%;
         float: left;
         margin-left: 0; } }
   @media (min-width: 75em) {
-    /* line 282, sass/layout/_main.scss */
+    /* line 285, sass/layout/_main.scss */
     li.hotel-subcat-list {
       width: 15.25424%;
       float: right;
       margin-left: 1.69492%; }
-      /* line 315, sass/layout/_main.scss */
+      /* line 318, sass/layout/_main.scss */
       li.hotel-subcat-list:nth-child(6n) {
         width: 15.25424%;
         float: left;
         margin-left: 0; } }
-  /* line 319, sass/layout/_main.scss */
+  /* line 322, sass/layout/_main.scss */
   li.hotel-subcat-list img {
     position: relative;
     max-height: 100%;
     left: 30%; }
 
-/* line 329, sass/layout/_main.scss */
+/* line 332, sass/layout/_main.scss */
 .hotel-list a.hotel-link {
   background-color: rgba(255, 255, 255, 0.85);
   border-bottom: 2px solid #001e45;
@@ -1201,7 +1203,7 @@ li.hotel-subcat-list {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px; }
   @media (min-width: 45em) {
-    /* line 329, sass/layout/_main.scss */
+    /* line 332, sass/layout/_main.scss */
     .hotel-list a.hotel-link {
       width: 74.57627%;
       float: right;
@@ -1209,10 +1211,10 @@ li.hotel-subcat-list {
       float: none;
       margin: auto;
       margin-bottom: 5px; } }
-  /* line 348, sass/layout/_main.scss */
+  /* line 351, sass/layout/_main.scss */
   .hotel-list a.hotel-link:hover {
     background-color: #ddd; }
-  /* line 353, sass/layout/_main.scss */
+  /* line 356, sass/layout/_main.scss */
   .hotel-list a.hotel-link h3.hotel-name {
     width: 74.57627%;
     float: right;
@@ -1221,30 +1223,30 @@ li.hotel-subcat-list {
     margin: 0;
     padding: 10px 20px; }
     @media (min-width: 45em) {
-      /* line 353, sass/layout/_main.scss */
+      /* line 356, sass/layout/_main.scss */
       .hotel-list a.hotel-link h3.hotel-name {
         width: 49.15254%;
         float: right;
         margin-left: 1.69492%; } }
-  /* line 363, sass/layout/_main.scss */
+  /* line 366, sass/layout/_main.scss */
   .hotel-list a.hotel-link span.hotel-rate {
     width: 23.72881%;
     float: left;
     margin-left: 0;
     *margin-right: -1em;
     display: inline; }
-    /* line 365, sass/layout/_main.scss */
+    /* line 368, sass/layout/_main.scss */
     .hotel-list a.hotel-link span.hotel-rate > img {
       padding-top: 12px; }
 
-/* line 373, sass/layout/_main.scss */
+/* line 376, sass/layout/_main.scss */
 article.single-hotel {
   max-width: 100%;
   float: none;
   display: block;
   padding: auto;
   margin: auto; }
-  /* line 385, sass/layout/_main.scss */
+  /* line 388, sass/layout/_main.scss */
   article.single-hotel .hotel-slider {
     position: relative;
     top: 0px;
@@ -1253,14 +1255,14 @@ article.single-hotel {
     max-width: 100%;
     height: 456px;
     background: rgba(44, 35, 40, 0.85); }
-  /* line 397, sass/layout/_main.scss */
+  /* line 400, sass/layout/_main.scss */
   article.single-hotel ul.hotel-detail {
     width: 800px;
     max-width: 100%;
     margin: auto;
     float: none;
     list-style: none; }
-    /* line 405, sass/layout/_main.scss */
+    /* line 408, sass/layout/_main.scss */
     article.single-hotel ul.hotel-detail li {
       display: block;
       margin: 10px  auto;
@@ -1268,21 +1270,21 @@ article.single-hotel {
       color: #fff;
       padding: 10px; }
       @media (min-width: 45em) {
-        /* line 405, sass/layout/_main.scss */
+        /* line 408, sass/layout/_main.scss */
         article.single-hotel ul.hotel-detail li {
           display: inline-block; } }
-      /* line 419, sass/layout/_main.scss */
+      /* line 422, sass/layout/_main.scss */
       article.single-hotel ul.hotel-detail li img {
         padding-bottom: 2px;
         vertical-align: top; }
-  /* line 427, sass/layout/_main.scss */
+  /* line 430, sass/layout/_main.scss */
   article.single-hotel .hotel-content {
     width: 100%;
     float: right;
     margin-left: 1.69492%;
     display: inline; }
     @media (min-width: 45em) {
-      /* line 427, sass/layout/_main.scss */
+      /* line 430, sass/layout/_main.scss */
       article.single-hotel .hotel-content {
         width: 74.57627%;
         float: right;
@@ -1290,10 +1292,10 @@ article.single-hotel {
         display: block;
         float: none;
         margin: auto; } }
-    /* line 435, sass/layout/_main.scss */
+    /* line 438, sass/layout/_main.scss */
     article.single-hotel .hotel-content #slider_container {
       margin: auto; }
-    /* line 438, sass/layout/_main.scss */
+    /* line 441, sass/layout/_main.scss */
     article.single-hotel .hotel-content .hotel-information {
       width: 800px;
       margin: 20px auto;
@@ -1302,7 +1304,7 @@ article.single-hotel {
       color: #fff;
       padding: 20px; }
 
-/* line 450, sass/layout/_main.scss */
+/* line 453, sass/layout/_main.scss */
 article.hentry {
   width: 100%;
   float: right;
@@ -1315,19 +1317,19 @@ article.hentry {
   margin-bottom: 30px;
   display: block;
   background-color: rgba(255, 255, 255, 0.85); }
-  /* line 459, sass/layout/_main.scss */
+  /* line 462, sass/layout/_main.scss */
   article.hentry .article-header {
     padding: 0 30px;
     border-bottom: 1px solid #aaa; }
-    /* line 462, sass/layout/_main.scss */
+    /* line 465, sass/layout/_main.scss */
     article.hentry .article-header h1 {
       margin-top: 0;
       margin-bottom: 10px; }
-  /* line 469, sass/layout/_main.scss */
+  /* line 472, sass/layout/_main.scss */
   article.hentry#post-not-found {
     background-color: rgba(44, 35, 40, 0.85);
     color: #fff; }
-    /* line 472, sass/layout/_main.scss */
+    /* line 475, sass/layout/_main.scss */
     article.hentry#post-not-found button, article.hentry#post-not-found input, article.hentry#post-not-found textarea {
       color: #001e45; }
 
