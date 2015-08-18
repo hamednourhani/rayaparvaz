@@ -1,5 +1,5 @@
 <?php
-/* rayaparvaz Custom Post Type Example
+/* naiau Custom Post Type Example
 This page walks you through creating 
 a custom post type and taxonomies. You
 can edit this one or copy the following code 
@@ -11,14 +11,14 @@ and change things if they are concentrated
 in their own file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/rayaparvaz/
+URL: http://themble.com/naiau/
 */
 
 // Flush rewrite rules for custom post types
-add_action( 'after_switch_theme', 'rayaparvaz_flush_rewrite_rules' );
+add_action( 'after_switch_theme', 'naiau_flush_rewrite_rules' );
 
 // Flush your rewrite rules
-function rayaparvaz_flush_rewrite_rules() {
+function naiau_flush_rewrite_rules() {
 	flush_rewrite_rules();
 }
 
@@ -28,21 +28,21 @@ function tour_post_type() {
 	register_post_type( 'tour', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Tour', 'rayaparvaz' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Tour', 'rayaparvaz' ), /* This is the individual type */
-			'all_items' => __( 'All Tours', 'rayaparvaz' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'rayaparvaz' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Tour', 'rayaparvaz' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'rayaparvaz' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Tours', 'rayaparvaz' ), /* Edit Display Title */
-			'new_item' => __( 'New Tour', 'rayaparvaz' ), /* New Display Title */
-			'view_item' => __( 'View Tour', 'rayaparvaz' ), /* View Display Title */
-			'search_items' => __( 'Search Tour', 'rayaparvaz' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'rayaparvaz' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'rayaparvaz' ), /* This displays if there is nothing in the trash */
+			'name' => __( 'Tour', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Tour', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All Tours', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Tour', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit Tours', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New Tour', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View Tour', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search Tour', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is a Tour', 'rayaparvaz' ), /* Custom Type Description */
+			'description' => __( 'This is a Tour', 'naiau' ), /* Custom Type Description */
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
@@ -73,21 +73,21 @@ function hotel_post_type() {
 	register_post_type( 'hotel', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Hotel', 'rayaparvaz' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Hotel', 'rayaparvaz' ), /* This is the individual type */
-			'all_items' => __( 'All Hotel', 'rayaparvaz' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'rayaparvaz' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Hotel', 'rayaparvaz' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'rayaparvaz' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Hotels', 'rayaparvaz' ), /* Edit Display Title */
-			'new_item' => __( 'New Hotel', 'rayaparvaz' ), /* New Display Title */
-			'view_item' => __( 'View Hotel', 'rayaparvaz' ), /* View Display Title */
-			'search_items' => __( 'Search Hotel', 'rayaparvaz' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'rayaparvaz' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'rayaparvaz' ), /* This displays if there is nothing in the trash */
+			'name' => __( 'Hotel', 'naiau' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Hotel', 'naiau' ), /* This is the individual type */
+			'all_items' => __( 'All Hotel', 'naiau' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'naiau' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Hotel', 'naiau' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'naiau' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit Hotels', 'naiau' ), /* Edit Display Title */
+			'new_item' => __( 'New Hotel', 'naiau' ), /* New Display Title */
+			'view_item' => __( 'View Hotel', 'naiau' ), /* View Display Title */
+			'search_items' => __( 'Search Hotel', 'naiau' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'naiau' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'naiau' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is a Hotel', 'rayaparvaz' ), /* Custom Type Description */
+			'description' => __( 'This is a Hotel', 'naiau' ), /* Custom Type Description */
 			'public' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
@@ -126,16 +126,16 @@ function hotel_post_type() {
 		array('tour'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Tour Categories', 'rayaparvaz' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Tour Category', 'rayaparvaz' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Tour Categories', 'rayaparvaz' ), /* search title for taxomony */
-				'all_items' => __( 'All Tour Categories', 'rayaparvaz' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Tour Category', 'rayaparvaz' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Tour Category:', 'rayaparvaz' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Tour Category', 'rayaparvaz' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Tour Category', 'rayaparvaz' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Tour Category', 'rayaparvaz' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Tour Category Name', 'rayaparvaz' ) /* name title for taxonomy */
+				'name' => __( 'Tour Categories', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Tour Category', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Tour Categories', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All Tour Categories', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Tour Category', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Tour Category:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Tour Category', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Tour Category', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Tour Category', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Tour Category Name', 'naiau' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true, 
 			'show_ui' => true,
@@ -150,16 +150,16 @@ function hotel_post_type() {
 		array('tour'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
-				'name' => __( 'Tour Tags', 'rayaparvaz' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Tour Tag', 'rayaparvaz' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Tour Tags', 'rayaparvaz' ), /* search title for taxomony */
-				'all_items' => __( 'All Tour Tags', 'rayaparvaz' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Tour Tag', 'rayaparvaz' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Tour Tag:', 'rayaparvaz' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Tour Tag', 'rayaparvaz' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Tour Tag', 'rayaparvaz' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Tour Tag', 'rayaparvaz' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Tour Tag Name', 'rayaparvaz' ) /* name title for taxonomy */
+				'name' => __( 'Tour Tags', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Tour Tag', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Tour Tags', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All Tour Tags', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Tour Tag', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Tour Tag:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Tour Tag', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Tour Tag', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Tour Tag', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Tour Tag Name', 'naiau' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
 			'show_ui' => true,
@@ -172,16 +172,16 @@ function hotel_post_type() {
 		array('hotel'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Hotel Categories', 'rayaparvaz' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Hotel Category', 'rayaparvaz' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Hotel Categories', 'rayaparvaz' ), /* search title for taxomony */
-				'all_items' => __( 'All Hotel Categories', 'rayaparvaz' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Hotel Category', 'rayaparvaz' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Hotel Category:', 'rayaparvaz' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Hotel Category', 'rayaparvaz' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Hotel Category', 'rayaparvaz' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Hotel Category', 'rayaparvaz' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Hotel Category Name', 'rayaparvaz' ) /* name title for taxonomy */
+				'name' => __( 'Hotel Categories', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Hotel Category', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Hotel Categories', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All Hotel Categories', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Hotel Category', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Hotel Category:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Hotel Category', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Hotel Category', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Hotel Category', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Hotel Category Name', 'naiau' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true, 
 			'show_ui' => true,
@@ -196,16 +196,16 @@ function hotel_post_type() {
 		array('hotel'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
-				'name' => __( 'Hotel Tags', 'rayaparvaz' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Hotel Tag', 'rayaparvaz' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Hotel Tags', 'rayaparvaz' ), /* search title for taxomony */
-				'all_items' => __( 'All Hotel Tags', 'rayaparvaz' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Hotel Tag', 'rayaparvaz' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Hotel Tag:', 'rayaparvaz' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Hotel Tag', 'rayaparvaz' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Hotel Tag', 'rayaparvaz' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Hotel Tag', 'rayaparvaz' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Hotel Tag Name', 'rayaparvaz' ) /* name title for taxonomy */
+				'name' => __( 'Hotel Tags', 'naiau' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Hotel Tag', 'naiau' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Hotel Tags', 'naiau' ), /* search title for taxomony */
+				'all_items' => __( 'All Hotel Tags', 'naiau' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Hotel Tag', 'naiau' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Hotel Tag:', 'naiau' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Hotel Tag', 'naiau' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Hotel Tag', 'naiau' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Hotel Tag', 'naiau' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Hotel Tag Name', 'naiau' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
 			'show_ui' => true,

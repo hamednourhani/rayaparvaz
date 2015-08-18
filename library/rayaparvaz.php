@@ -1,12 +1,12 @@
 <?php
-/* Welcome to rayaparvaz :)
-This is the core rayaparvaz file where most of the
+/* Welcome to naiau :)
+This is the core naiau file where most of the
 main functions & features reside. If you have
 any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/rayaparvaz/
+URL: http://themble.com/naiau/
 
   - head cleanup (remove rsd, uri links, junk css, ect)
   - enqueueing scripts & styles
@@ -29,7 +29,7 @@ removing all the junk we don't
 need.
 *********************/
 
-function rayaparvaz_head_cleanup() {
+function naiau_head_cleanup() {
 	// category feeds
 	// remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// post and comment feeds
@@ -47,11 +47,11 @@ function rayaparvaz_head_cleanup() {
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
 	// remove WP version from css
-	add_filter( 'style_loader_src', 'rayaparvaz_remove_wp_ver_css_js', 9999 );
+	add_filter( 'style_loader_src', 'naiau_remove_wp_ver_css_js', 9999 );
 	// remove Wp version from scripts
-	add_filter( 'script_loader_src', 'rayaparvaz_remove_wp_ver_css_js', 9999 );
+	add_filter( 'script_loader_src', 'naiau_remove_wp_ver_css_js', 9999 );
 
-} /* end rayaparvaz head cleanup */
+} /* end naiau head cleanup */
 
 //hide admin bar from front end
 function my_function_admin_bar(){ 
@@ -92,24 +92,24 @@ function rw_title( $title, $sep, $seplocation ) {
 } // end better title
 
 // remove WP version from RSS
-function rayaparvaz_rss_version() { return ''; }
+function naiau_rss_version() { return ''; }
 
 // remove WP version from scripts
-function rayaparvaz_remove_wp_ver_css_js( $src ) {
+function naiau_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
 		$src = remove_query_arg( 'ver', $src );
 	return $src;
 }
 
 // remove injected CSS for recent comments widget
-function rayaparvaz_remove_wp_widget_recent_comments_style() {
+function naiau_remove_wp_widget_recent_comments_style() {
 	if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
 		remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
 	}
 }
 
 // remove injected CSS from recent comments widget
-function rayaparvaz_remove_recent_comments_style() {
+function naiau_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
 		remove_action( 'wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style') );
@@ -117,7 +117,7 @@ function rayaparvaz_remove_recent_comments_style() {
 }
 
 // remove injected CSS from gallery
-function rayaparvaz_gallery_style($css) {
+function naiau_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
@@ -127,20 +127,20 @@ SCRIPTS & ENQUEUEING
 *********************/
 
 // loading modernizr and jquery, and reply script
-function rayaparvaz_scripts_and_styles() {
+function naiau_scripts_and_styles() {
 
   global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'rayaparvaz-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'naiau-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'rayaparvaz-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
+		wp_register_style( 'naiau-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'rayaparvaz-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
+		wp_register_style( 'naiau-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -148,14 +148,14 @@ function rayaparvaz_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'rayaparvaz-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','jssort5' ), '', true );
+		wp_register_script( 'naiau-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery','jssort5' ), '', true );
 		wp_register_script( 'jssort5', get_stylesheet_directory_uri() . '/js/lib/jssor.slider.min.js', array( 'jquery' ), '', true);
 		// enqueue styles and scripts
-		wp_enqueue_script( 'rayaparvaz-modernizr' );
-		wp_enqueue_style( 'rayaparvaz-stylesheet' );
-		wp_enqueue_style( 'rayaparvaz-ie-only' );
+		wp_enqueue_script( 'naiau-modernizr' );
+		wp_enqueue_style( 'naiau-stylesheet' );
+		wp_enqueue_style( 'naiau-ie-only' );
 
-		$wp_styles->add_data( 'rayaparvaz-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		$wp_styles->add_data( 'naiau-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 		/*
 		I recommend using a plugin to call jQuery
@@ -164,7 +164,7 @@ function rayaparvaz_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jssort5' );
-		wp_enqueue_script( 'rayaparvaz-js' );
+		wp_enqueue_script( 'naiau-js' );
 		
 
 		// tage for taxonomy image url
@@ -179,7 +179,7 @@ THEME SUPPORT
 *********************/
 
 // Adding WP 3+ Functions & Theme Support
-function rayaparvaz_theme_support() {
+function naiau_theme_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
 	add_theme_support( 'post-thumbnails' );
@@ -224,20 +224,20 @@ function rayaparvaz_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'rayaparvaz' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'rayaparvaz' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'naiau' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'naiau' ) // secondary nav in footer
 		)
 	);
-} /* end rayaparvaz theme support */
+} /* end naiau theme support */
 
 
 /*********************
 RELATED POSTS FUNCTION
 *********************/
 
-// Related Posts Function (call using rayaparvaz_related_posts(); )
-function rayaparvaz_related_posts() {
-	echo '<ul id="rayaparvaz-related-posts">';
+// Related Posts Function (call using naiau_related_posts(); )
+function naiau_related_posts() {
+	echo '<ul id="naiau-related-posts">';
 	global $post;
 	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
@@ -255,19 +255,19 @@ function rayaparvaz_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'rayaparvaz' ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'naiau' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
 	echo '</ul>';
-} /* end rayaparvaz related posts function */
+} /* end naiau related posts function */
 
 /*********************
 PAGE NAVI
 *********************/
 
 // Numeric Page Navi (built into the theme by default)
-function rayaparvaz_page_navi() {
+function naiau_page_navi() {
   global $wp_query;
   $bignum = 999999999;
   if ( $wp_query->max_num_pages <= 1 )
@@ -292,23 +292,23 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function rayaparvaz_filter_ptags_on_images($content){
+function naiau_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 // This removes the annoying […] to a Read More link
-function rayaparvaz_excerpt_more($more) {
+function naiau_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'rayaparvaz' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'rayaparvaz' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'naiau' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'naiau' ) .'</a>';
 }
 
-add_action('wp_head','rayaparvaz_inline_style' );
-function rayaparvaz_inline_style(){
+add_action('wp_head','naiau_inline_style' );
+function naiau_inline_style(){
 	$background_url = null;
 	$page_id= get_queried_object_id();
 	if(is_singular()){
-		$background_url = get_post_meta( get_the_ID(), '_rayaparvaz_background_image', true );
+		$background_url = get_post_meta( get_the_ID(), '_naiau_background_image', true );
 	}elseif(is_archive() || is_tax()){
 		$params = array(
 		  'term_id' => $page_id,

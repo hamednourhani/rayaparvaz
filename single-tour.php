@@ -23,9 +23,9 @@
 					
 					<?php 
 						
-						$tour_airline = get_post_meta( get_the_ID(), '_rayaparvaz_tour_airline', true );
-						$tour_pick_up = get_post_meta( get_the_ID(), '_rayaparvaz_pick_up_time', true );
-						$tour_landing = get_post_meta( get_the_ID(), '_rayaparvaz_landing_time', true );
+						$tour_airline = get_post_meta( get_the_ID(), '_naiau_tour_airline', true );
+						$tour_pick_up = get_post_meta( get_the_ID(), '_naiau_pick_up_time', true );
+						$tour_landing = get_post_meta( get_the_ID(), '_naiau_landing_time', true );
 					?>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -43,17 +43,17 @@
 								
 								<footer class="tour-information">
 									<h3 class="tour-information-title">
-										<?php echo __('Tour Information','rayaparvaz')?>
+										<?php echo __('Tour Information','naiau')?>
 									</h3>
 									<ul class="tour-info-list">
 										<li>
-											<?php echo '<strong>'.__('Airline : ','rayaparvaz').'</strong>'.'<span>'.$tour_airline.'</span>'; ?>
+											<?php echo '<strong>'.__('Airline : ','naiau').'</strong>'.'<span>'.$tour_airline.'</span>'; ?>
 										</li>
 										<li>
-											<?php echo '<strong>'.__('Pickup Time : ','rayaparvaz').'</strong>'.'<span>'.$tour_pick_up.'</span>'; ?>
+											<?php echo '<strong>'.__('Pickup Time : ','naiau').'</strong>'.'<span>'.$tour_pick_up.'</span>'; ?>
 										</li>
 										<li>
-											<?php echo '<strong>'.__('Landing Time : ','rayaparvaz').'</strong>'.'<span>'.$tour_landing.'</span>'; ?>
+											<?php echo '<strong>'.__('Landing Time : ','naiau').'</strong>'.'<span>'.$tour_landing.'</span>'; ?>
 										</li>
 									</ul>
 								</footer>
@@ -79,13 +79,13 @@
 
 							<article id="post-not-found" class="single-tour cf">
 								<header class="tour-header">
-									<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
+									<h1><?php _e( 'Oops, Post Not Found!', 'naiau' ); ?></h1>
 								</header>
 								<section class="tour-content">
-									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
+									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
 								</section>
 								<footer class="tour-footer">
-									<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'rayaparvaz' ); ?></p>
+									<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'naiau' ); ?></p>
 								</footer>
 							</article>
 

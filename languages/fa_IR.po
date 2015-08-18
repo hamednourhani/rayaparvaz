@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rayaparvaz\n"
+"Project-Id-Version: naiau\n"
 "POT-Creation-Date: 2015-07-31 19:37+0330\n"
 "PO-Revision-Date: 2015-08-01 12:02+0430\n"
 "Last-Translator: \n"
@@ -56,7 +56,7 @@ msgstr "کامنت های بیشتر"
 msgid "Comments are closed."
 msgstr "دیدگاه ها بسته است."
 
-#: footer.php:9 library/rayaparvaz.php:228
+#: footer.php:9 library/naiau.php:228
 msgid "Footer Links"
 msgstr "لینک های پانوشت"
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: header.php:65 library/rayaparvaz.php:227
+#: header.php:65 library/naiau.php:227
 msgid "The Main Menu"
 msgstr "فهرست اصلی"
 
@@ -136,7 +136,7 @@ msgstr "این خطا مربوط به صفحه page.php است"
 msgid "Search Results for:"
 msgstr "نتایج جستجو برای :"
 
-#: search.php:27 library/rayaparvaz.php:303
+#: search.php:27 library/naiau.php:303
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب"
 
@@ -219,9 +219,9 @@ msgstr ""
 
 #: library/admin.php:141
 msgid ""
-"<span id=\"footer-thankyou\">Developed by <a href=\"http://rayaparvaz.com\" "
-"target=\"_blank\">Rayaparvaz</a></span>. Built using <a href=\"http://"
-"themble.com/rayaparvaz\" target=\"_blank\">rayaparvaz</a>."
+"<span id=\"footer-thankyou\">Developed by <a href=\"http://naiau.com\" "
+"target=\"_blank\">naiau</a></span>. Built using <a href=\"http://"
+"themble.com/naiau\" target=\"_blank\">naiau</a>."
 msgstr ""
 
 #: library/cmb-functions.php:112
@@ -638,16 +638,16 @@ msgstr "افزودن برچسب جدید هتل"
 msgid "New Hotel Tag Name"
 msgstr "نام برچسب هتل"
 
-#: library/rayaparvaz.php:87
+#: library/naiau.php:87
 #, php-format
 msgid "Page %s"
 msgstr "صفحه  %s"
 
-#: library/rayaparvaz.php:258
+#: library/naiau.php:258
 msgid "No Related Posts Yet!"
 msgstr "هنوز مطلب مرتبطی وجود ندارد!"
 
-#: library/rayaparvaz.php:303
+#: library/naiau.php:303
 msgid "Read "
 msgstr "خواندن"
 

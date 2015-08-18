@@ -31,13 +31,13 @@
 
 							<article id="post-not-found" class="hentry cf">
 									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
+										<h1><?php _e( 'Oops, Post Not Found!', 'naiau' ); ?></h1>
 									</header>
 									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
+										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
 									</section>
 									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'rayaparvaz' ); ?></p>
+											<p><?php _e( 'This is the error message in the single.php template.', 'naiau' ); ?></p>
 									</footer>
 							</article>
 

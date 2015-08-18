@@ -17,9 +17,9 @@
 
 <?php get_header();
 			
-			$hotel_region = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_region', true );
-			$hotel_degree = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_degree', true );
-			$hotel_slides = get_post_meta( get_the_ID(), '_rayaparvaz_file_list', true );
+			$hotel_region = get_post_meta( get_the_ID(), '_naiau_hotel_region', true );
+			$hotel_degree = get_post_meta( get_the_ID(), '_naiau_hotel_degree', true );
+			$hotel_slides = get_post_meta( get_the_ID(), '_naiau_file_list', true );
 
 			?>
 
@@ -36,11 +36,11 @@
 								<ul class="hotel-detail">
 									<li class="hotel-title "><?php the_title(); ?></li>
 									<li class="hotel-region">
-										<?php echo __('Hotel Region : ','rayaparvaz').$hotel_region; ?>
+										<?php echo __('Hotel Region : ','naiau').$hotel_region; ?>
 									</li>
 									
 									<li class="hotel-degree">
-										<?php echo __('Hotel Degree : ','rayaparvaz');?>
+										<?php echo __('Hotel Degree : ','naiau');?>
 										<img class="hotel-single-rate" src='<?php echo get_stylesheet_directory_uri()."/images/star".$hotel_degree.".png"; ?>'/>
 									</li>
 								</ul>
@@ -68,7 +68,7 @@
 						        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 456px; overflow: hidden;">
 						            
 						            	<?php 
-						            		$files = get_post_meta( get_the_ID(), '_rayaparvaz_image_list', 1 );
+						            		$files = get_post_meta( get_the_ID(), '_naiau_image_list', 1 );
 										    //var_dump($file);
 										    
 										    // Loop through them and output an image
@@ -123,13 +123,13 @@
 								<section class="layout">
 									<article id="post-not-found" class="hotel-slideshow cf">
 										<header class="tour-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Found!', 'naiau' ); ?></h1>
 										</header>
 										<section class="tour-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
 										</section>
 										<footer class="tour-footer">
-											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'rayaparvaz' ); ?></p>
+											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'naiau' ); ?></p>
 										</footer>
 									</article>
 								</section>	

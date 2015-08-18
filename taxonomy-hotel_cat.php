@@ -40,7 +40,7 @@
 						<?php if(!$children) { ?>
 							<div class="hotel-list">
 								 <?php while (have_posts()) : the_post(); 
-										$hotel_degree = get_post_meta( get_the_ID(), '_rayaparvaz_hotel_degree', true );
+										$hotel_degree = get_post_meta( get_the_ID(), '_naiau_hotel_degree', true );
 									?>
 										<a href="<?php the_permalink() ?>" class="hotel-link" rel="bookmark" title="<?php the_title_attribute(); ?>">
 											<h3 class="hotel-name"><?php the_title(); ?></h3>
@@ -79,19 +79,19 @@
 						   		</ul>
 						 	<?php } //else
 
-								rayaparvaz_page_navi(); 
+								naiau_page_navi(); 
 
 					 } else { ?>
 
 							<article id="archive-hotel" class="archive-hotel cf">
 								<header class="article-header">
-									<h1><?php _e( ' hala hoola Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
+									<h1><?php _e( ' hala hoola Oops, Post Not Found!', 'naiau' ); ?></h1>
 								</header>
 								<section class="entry-content">
-									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
+									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
 								</section>
 								<footer class="article-footer">
-										<p><?php _e( 'This is the error message in the taxonomy-custom_cat.php template.', 'rayaparvaz' ); ?></p>
+										<p><?php _e( 'This is the error message in the taxonomy-custom_cat.php template.', 'naiau' ); ?></p>
 								</footer>
 							</article>
 
