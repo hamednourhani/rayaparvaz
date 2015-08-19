@@ -290,7 +290,7 @@ function rayaparvaz_register_repeatable_tour_package_metabox() {
 		'name'    => __( 'Hotel Name', 'rayaparvaz' ),
 		'desc'    => __( 'choose hotel name', 'rayaparvaz' ),
 		'id'      => 'package_hotel',
-		'type'    => 'select',
+		'type'    => 'radio_inline',
 		'options' => $package_hotels,
 			
 	) );
