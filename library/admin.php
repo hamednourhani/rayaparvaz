@@ -7,7 +7,7 @@ It's turned off by default, but you can call it
 via the functions file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/naiau/
+URL: http://themble.com/rayaparvaz/
 
 Special Thanks for code & inspiration to:
 @jackmcconnell - http://www.voltronik.co.uk/
@@ -47,7 +47,7 @@ function disable_default_dashboard_widgets() {
 	have more plugin widgets you'd like to remove?
 	share them with us so we can get a list of
 	the most commonly used. :D
-	https://github.com/eddiemachado/naiau/issues
+	https://github.com/eddiemachado/rayaparvaz/issues
 	*/
 }
 
@@ -63,7 +63,7 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
 */
 
 // RSS Dashboard Widget
-function naiau_rss_dashboard_widget() {
+function rayaparvaz_rss_dashboard_widget() {
 	if ( function_exists( 'fetch_feed' ) ) {
 		// include_once( ABSPATH . WPINC . '/feed.php' );               // include the required file
 		$feed = fetch_feed( 'http://feeds.feedburner.com/wpcandy' );        // specify the source feed
@@ -79,7 +79,7 @@ function naiau_rss_dashboard_widget() {
 	else foreach ($items as $item) { ?>
 
 	<h4 style="margin-bottom: 0;">
-		<a href="<?php echo $item->get_permalink(); ?>" title="<?php echo mysql2date( __( 'j F Y @ g:i a', 'naiau' ), $item->get_date( 'Y-m-d H:i:s' ) ); ?>" target="_blank">
+		<a href="<?php echo $item->get_permalink(); ?>" title="<?php echo mysql2date( __( 'j F Y @ g:i a', 'rayaparvaz' ), $item->get_date( 'Y-m-d H:i:s' ) ); ?>" target="_blank">
 			<?php echo $item->get_title(); ?>
 		</a>
 	</h4>
@@ -90,8 +90,8 @@ function naiau_rss_dashboard_widget() {
 }
 
 // calling all custom dashboard widgets
-function naiau_custom_dashboard_widgets() {
-	wp_add_dashboard_widget( 'naiau_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'naiau' ), 'naiau_rss_dashboard_widget' );
+function rayaparvaz_custom_dashboard_widgets() {
+	wp_add_dashboard_widget( 'rayaparvaz_rss_dashboard_widget', __( 'Recently on Themble (Customize on admin.php)', 'rayaparvaz' ), 'rayaparvaz_rss_dashboard_widget' );
 	/*
 	Be sure to drop any other created Dashboard Widgets
 	in this function and they will all load.
@@ -102,7 +102,7 @@ function naiau_custom_dashboard_widgets() {
 // removing the dashboard widgets
 //add_action( 'wp_dashboard_setup', 'disable_default_dashboard_widgets' );
 // adding any custom widgets
-//add_action( 'wp_dashboard_setup', 'naiau_custom_dashboard_widgets' );
+//add_action( 'wp_dashboard_setup', 'rayaparvaz_custom_dashboard_widgets' );
 
 
 /************* CUSTOM LOGIN PAGE *****************/
@@ -111,20 +111,20 @@ function naiau_custom_dashboard_widgets() {
 
 //Updated to proper 'enqueue' method
 //http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
-function naiau_login_css() {
-	wp_enqueue_style( 'naiau_login_css', get_template_directory_uri() . '/library/css/login.css', false );
+function rayaparvaz_login_css() {
+	wp_enqueue_style( 'rayaparvaz_login_css', get_template_directory_uri() . '/library/css/login.css', false );
 }
 
 // changing the logo link from wordpress.org to your site
-function naiau_login_url() {  return home_url(); }
+function rayaparvaz_login_url() {  return home_url(); }
 
 // changing the alt text on the logo to show your site name
-function naiau_login_title() { return get_option( 'blogname' ); }
+function rayaparvaz_login_title() { return get_option( 'blogname' ); }
 
 // calling it only on the login page
-//add_action( 'login_enqueue_scripts', 'naiau_login_css', 10 );
-add_filter( 'login_headerurl', 'naiau_login_url' );
-add_filter( 'login_headertitle', 'naiau_login_title' );
+//add_action( 'login_enqueue_scripts', 'rayaparvaz_login_css', 10 );
+add_filter( 'login_headerurl', 'rayaparvaz_login_url' );
+add_filter( 'login_headertitle', 'rayaparvaz_login_title' );
 
 
 /************* CUSTOMIZE ADMIN *******************/
@@ -137,11 +137,11 @@ you like.
 */
 
 // Custom Backend Footer
-function naiau_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Developed by <a href="http://naiau.com" target="_blank">naiau</a></span>. Built using <a href="http://themble.com/naiau" target="_blank">naiau</a>.', 'naiau' );
+function rayaparvaz_custom_admin_footer() {
+	_e( '<span id="footer-thankyou">Developed by <a href="http://rayaparvaz.com" target="_blank">rayaparvaz</a></span>. Built using <a href="http://themble.com/rayaparvaz" target="_blank">rayaparvaz</a>.', 'rayaparvaz' );
 }
 
 // adding it to the admin area
-add_filter( 'admin_footer_text', 'naiau_custom_admin_footer' );
+add_filter( 'admin_footer_text', 'rayaparvaz_custom_admin_footer' );
 
 ?>

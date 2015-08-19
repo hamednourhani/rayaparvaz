@@ -1,15 +1,15 @@
 <?php
 /*
 Author: Eddie Machado
-URL: http://themble.com/naiau/
+URL: http://themble.com/rayaparvaz/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
-// LOAD naiau CORE (if you remove this, the theme will break)
-require_once( 'library/naiau.php' );
+// LOAD rayaparvaz CORE (if you remove this, the theme will break)
+require_once( 'library/rayaparvaz.php' );
 
 //Include and setup custom metaboxes and fields.
 if( !class_exists("CMB2") ){
@@ -21,53 +21,53 @@ require_once( 'library/cmb-functions.php' );
  //require_once( 'library/admin.php' );
 
 /*********************
-LAUNCH naiau
+LAUNCH rayaparvaz
 Let's get everything up and running.
 *********************/
 
-function naiau_ahoy() {
+function rayaparvaz_ahoy() {
 
   //Allow editor style.
   //add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'naiau', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'rayaparvaz', get_template_directory() . '/languages' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
-  add_action( 'init', 'naiau_head_cleanup' );
+  add_action( 'init', 'rayaparvaz_head_cleanup' );
   // A better title
   add_filter( 'wp_title', 'rw_title', 10, 3 );
   // remove WP version from RSS
-  add_filter( 'the_generator', 'naiau_rss_version' );
+  add_filter( 'the_generator', 'rayaparvaz_rss_version' );
   // remove pesky injected css for recent comments widget
-  add_filter( 'wp_head', 'naiau_remove_wp_widget_recent_comments_style', 1 );
+  add_filter( 'wp_head', 'rayaparvaz_remove_wp_widget_recent_comments_style', 1 );
   // clean up comment styles in the head
-  add_action( 'wp_head', 'naiau_remove_recent_comments_style', 1 );
+  add_action( 'wp_head', 'rayaparvaz_remove_recent_comments_style', 1 );
   // clean up gallery output in wp
-  add_filter( 'gallery_style', 'naiau_gallery_style' );
+  add_filter( 'gallery_style', 'rayaparvaz_gallery_style' );
 
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'naiau_scripts_and_styles', 999 );
+  add_action( 'wp_enqueue_scripts', 'rayaparvaz_scripts_and_styles', 999 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
-  naiau_theme_support();
+  rayaparvaz_theme_support();
 
   // adding sidebars to Wordpress (these are created in functions.php)
-  add_action( 'widgets_init', 'naiau_register_sidebars' );
+  add_action( 'widgets_init', 'rayaparvaz_register_sidebars' );
 
   // cleaning up random code around images
-  add_filter( 'the_content', 'naiau_filter_ptags_on_images' );
+  add_filter( 'the_content', 'rayaparvaz_filter_ptags_on_images' );
   // cleaning up excerpt
-  add_filter( 'excerpt_more', 'naiau_excerpt_more' );
+  add_filter( 'excerpt_more', 'rayaparvaz_excerpt_more' );
 
-} /* end naiau ahoy */
+} /* end rayaparvaz ahoy */
 
 // let's get this party started
-add_action( 'after_setup_theme', 'naiau_ahoy' );
+add_action( 'after_setup_theme', 'rayaparvaz_ahoy' );
 
 
 /************* OEMBED SIZE OPTIONS *************/
@@ -79,8 +79,8 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'naiau-thumb-600', 600, 150, true );
-add_image_size( 'naiau-thumb-300', 300, 300, true );
+add_image_size( 'rayaparvaz-thumb-600', 600, 150, true );
+add_image_size( 'rayaparvaz-thumb-300', 300, 300, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -94,20 +94,20 @@ inside the thumbnail function.
 
 For example, to call the 300 x 100 sized image,
 we would use the function:
-<?php the_post_thumbnail( 'naiau-thumb-300' ); ?>
+<?php the_post_thumbnail( 'rayaparvaz-thumb-300' ); ?>
 for the 600 x 150 image:
-<?php the_post_thumbnail( 'naiau-thumb-600' ); ?>
+<?php the_post_thumbnail( 'rayaparvaz-thumb-600' ); ?>
 
 You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
-add_filter( 'image_size_names_choose', 'naiau_custom_image_sizes' );
+add_filter( 'image_size_names_choose', 'rayaparvaz_custom_image_sizes' );
 
-function naiau_custom_image_sizes( $sizes ) {
+function rayaparvaz_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'naiau-thumb-600' => __('600px by 400px'),
-        'naiau-thumb-300' => __('300px by 250px'),
+        'rayaparvaz-thumb-600' => __('600px by 400px'),
+        'rayaparvaz-thumb-300' => __('300px by 250px'),
     ) );
 }
 
@@ -135,7 +135,7 @@ new image size.
   - Create some boilerplate Sections, Controls and Settings
 */
 
-function naiau_theme_customizer($wp_customize) {
+function rayaparvaz_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
   //
   // Uncomment the below lines to remove the default customize sections 
@@ -154,16 +154,16 @@ function naiau_theme_customizer($wp_customize) {
   // $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
-add_action( 'customize_register', 'naiau_theme_customizer' );
+add_action( 'customize_register', 'rayaparvaz_theme_customizer' );
 
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
-function naiau_register_sidebars() {
+function rayaparvaz_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'naiau' ),
-		'description' => __( 'The first (primary) sidebar.', 'naiau' ),
+		'name' => __( 'Sidebar 1', 'rayaparvaz' ),
+		'description' => __( 'The first (primary) sidebar.', 'rayaparvaz' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -180,8 +180,8 @@ function naiau_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'naiau' ),
-		'description' => __( 'The second (secondary) sidebar.', 'naiau' ),
+		'name' => __( 'Sidebar 2', 'rayaparvaz' ),
+		'description' => __( 'The second (secondary) sidebar.', 'rayaparvaz' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -200,7 +200,7 @@ function naiau_register_sidebars() {
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
-function naiau_comments( $comment, $args, $depth ) {
+function rayaparvaz_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
   <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
     <article  class="cf">
@@ -218,13 +218,13 @@ function naiau_comments( $comment, $args, $depth ) {
         ?>
         <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'naiau' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'naiau' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'naiau' )); ?> </a></time>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'rayaparvaz' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'rayaparvaz' ),'  ','') ) ?>
+        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'rayaparvaz' )); ?> </a></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>
         <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'naiau' ) ?></p>
+          <p><?php _e( 'Your comment is awaiting moderation.', 'rayaparvaz' ) ?></p>
         </div>
       <?php endif; ?>
       <section class="comment_content cf">
@@ -244,11 +244,11 @@ external fonts. If you're using Google Fonts, you
 can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
-function naiau_fonts() {
+function rayaparvaz_fonts() {
   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
-//add_action('wp_enqueue_scripts', 'naiau_fonts');
+//add_action('wp_enqueue_scripts', 'rayaparvaz_fonts');
 
 // Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(

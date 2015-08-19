@@ -1,19 +1,20 @@
 <?php 
 // Tour Packages
-	$tour_packages = get_post_meta( get_the_ID(), '_naiau_group_tour_package', true );
+	$tour_packages = get_post_meta( get_the_ID(), '_rayaparvaz_group_tour_package', true );
+	//var_dump($tour_packages);
 	
 ?>
 	<table class="tour-table">
 		<tbody class="tour-table-body">
 			
 			<tr class="tour-table-header">
-				<th><?php echo __('Hotel Name','naiau'); ?></th>
-				<th><?php echo __('Hotel Rank','naiau'); ?></th>
-				<th><?php echo __('Hotel Service','naiau'); ?></th>
-				<th><?php echo __('Two Bed','naiau'); ?></th>
-				<th><?php echo __('One Bed','naiau'); ?></th>
-				<th><?php echo __('With Child','naiau'); ?></th>
-				<th><?php echo __('Without Child','naiau'); ?></th>
+				<th><?php echo __('Hotel Name','rayaparvaz'); ?></th>
+				<th><?php echo __('Hotel Rank','rayaparvaz'); ?></th>
+				<th><?php echo __('Hotel Service','rayaparvaz'); ?></th>
+				<th><?php echo __('Two Bed','rayaparvaz'); ?></th>
+				<th><?php echo __('One Bed','rayaparvaz'); ?></th>
+				<th><?php echo __('With Child','rayaparvaz'); ?></th>
+				<th><?php echo __('Without Child','rayaparvaz'); ?></th>
 			</tr> <!-- tour-table-header -->
 			
 			<?php 
@@ -29,8 +30,8 @@
 			    	$hotel_name = get_the_title($hotel_id);
 			    	$hotel_url = post_permalink($hotel_id);
 
-			    	$hotel_rank = esc_html(get_post_meta( $hotel_id, '_naiau_hotel_rank', true ));
-			    	$hotel_degree = esc_html(get_post_meta( $hotel_id, '_naiau_hotel_degree', true ));
+			    	$hotel_rank = esc_html(get_post_meta( $hotel_id, '_rayaparvaz_hotel_rank', true ));
+			    	$hotel_degree = esc_html(get_post_meta( $hotel_id, '_rayaparvaz_hotel_degree', true ));
 
 
 

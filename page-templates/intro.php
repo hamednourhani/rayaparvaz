@@ -2,13 +2,13 @@
 /**
  * Template Name: Intro Page
  * @package WordPress
- * @subpackage naiau
- * @since naiau 1.0
+ * @subpackage rayaparvaz
+ * @since rayaparvaz 1.0
  */
 get_header(); 
 
-			$external_url = get_post_meta( get_the_ID(), '_naiau_intro_external_tours', 1 );
-			$internal_url = get_post_meta( get_the_ID(), '_naiau_intro_internal_tours', 1 );
+			$external_url = get_post_meta( get_the_ID(), '_rayaparvaz_intro_external_tours', 1 );
+			$internal_url = get_post_meta( get_the_ID(), '_rayaparvaz_intro_internal_tours', 1 );
 		?>
 			<main class="site-main">
 				<div class="logo-area">

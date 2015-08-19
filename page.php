@@ -32,7 +32,7 @@
 										 *
 										*/
 										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'naiau' ) . '</span>',
+											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'rayaparvaz' ) . '</span>',
 											'after'       => '</div>',
 											'link_before' => '<span>',
 											'link_after'  => '</span>',
@@ -52,13 +52,13 @@
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'naiau' ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Found!', 'rayaparvaz' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'naiau' ); ?></p>
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'rayaparvaz' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page.php template.', 'naiau' ); ?></p>
+												<p><?php _e( 'This is the error message in the page.php template.', 'rayaparvaz' ); ?></p>
 										</footer>
 									</article>
 

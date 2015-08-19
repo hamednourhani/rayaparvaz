@@ -53,16 +53,16 @@
 
 				<div id="inner-header" class="inner-header cf">
 					<a href="#" class="menu-toggler">
-						<img class="mobile-site-logo" src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="naiau" alt="naiau"/>
+						<img class="mobile-site-logo" src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="rayaparvaz" alt="rayaparvaz"/>
 						<img class="menu-icon" src="<?php echo get_template_directory_uri();?>/images/menu-toggler.png" alt="Menu" title="Menu"/>
 					</a>
 
 					<nav role="navigation" class = "header-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<a href="http://naiau.com" class="site-logo"><img src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="naiau" /></a>
+						<a href="http://rayaparvaz.com" class="site-logo"><img src="<?php echo get_template_directory_uri();?>/images/RayaSite-30.png" title="rayaparvaz" /></a>
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'naiau' ),  // nav name
+    					         'menu' => __( 'The Main Menu', 'rayaparvaz' ),  // nav name
     					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
     					         'theme_location' => 'main-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
