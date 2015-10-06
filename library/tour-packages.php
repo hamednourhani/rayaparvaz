@@ -55,6 +55,8 @@
 						 <span "hotel-service">
 						 	<?php  if($hotel_service == "b_b"){
 						 				echo "<span> B.B </span>".'<img src="'.get_stylesheet_directory_uri().'/images/cup.png"/>';
+						 			}elseif($hotel_service == "h_b"){
+						 				echo "<span> H.B </span>".'<img src="'.get_stylesheet_directory_uri().'/images/cup.png"/>';
 						 			}elseif($hotel_service == "u_all"){
 						 				echo "<span> U.All </span>".'<img src="'.get_stylesheet_directory_uri().'/images/spoon.png"/>';
 						 			}elseif($hotel_service == "all"){
